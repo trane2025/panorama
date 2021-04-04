@@ -167,7 +167,7 @@ const FlexContainer = styled.ul`
 `;
 
 const BackGround = styled.div`
-    background: url('/images/plastikWindow/whatSafety.jpg') no-repeat center center;
+    background: url('/images/plastikWindow/WhatSafety.jpg') no-repeat center center;
     padding-bottom: 100px;
 
     h2 {
