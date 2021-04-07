@@ -17,11 +17,8 @@ function Slider({ items, setCheckBox }) {
                     nextEl: `${ArrowNext}`,
                     prevEl: `${ArrowPrev}`
                 }}
-                scrollbar={{ draggable: true }}
+                scrollbar={false}
                 loop={false}
-                autoplay={{
-                    delay: 4000,
-                }}
             >
 
                 {Object.values(items).map(checkbox => {
@@ -36,15 +33,15 @@ function Slider({ items, setCheckBox }) {
             <ArrowNext>
                 <svg
                     width="30px" height="40px">
-                    <path fillRule="evenodd" stroke="rgb(45, 45, 45)" strokeWidth="6px" strokeLinecap="butt" strokeLinejoin="miter" fill="none"
+                    <path fillRule="evenodd" strokeWidth="6px" strokeLinecap="butt" strokeLinejoin="miter" fill="none"
                         d="M7.621,3.006 L23.016,18.504 L7.621,34.002 " />
                 </svg>
             </ArrowNext>
             <ArrowPrev>
                 <svg
 
-                    width="29px" height="40px">
-                    <path fillRule="evenodd" stroke="rgb(45, 45, 45)" strokeWidth="6px" strokeLinecap="butt" strokeLinejoin="miter" fill="none"
+                    width="30px" height="40px">
+                    <path fillRule="evenodd" strokeWidth="6px" strokeLinecap="butt" strokeLinejoin="miter" fill="none"
                         d="M18.680,33.994 L3.016,18.496 L18.680,2.998 " />
                 </svg>
             </ArrowPrev>
@@ -62,6 +59,10 @@ const ArrowNext = styled.i`
     top: 85px;
     cursor: pointer;
     user-select: none;
+
+    svg {
+        stroke:rgb(45, 45, 45);
+    }
 `;
 
 const ArrowPrev = styled.i`
@@ -71,6 +72,10 @@ const ArrowPrev = styled.i`
     top: 85px;
     cursor: pointer;
     user-select: none;
+
+    svg {
+        stroke:rgb(45, 45, 45);
+    }
 `;
 
 const WraperSlides = styled.div`
@@ -85,6 +90,14 @@ const WraperSlides = styled.div`
     min-width: 0;
     min-height: 0;
     position: relative;
+
+    .swiper-button-disabled {
+       
+        svg {
+            stroke: rgb(161, 161, 161);
+        }
+        
+    }
 `;
 
 

@@ -12,7 +12,8 @@ export default Container;
 
 const Section = styled.div`
     position: relative;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 15px;
 `;

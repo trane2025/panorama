@@ -1,8 +1,12 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import Contacts from '../Contacts/Contacts';
 import Footer from '../Footer/Footer';
 import Navigation from '../Navigation/Navigation';
+import OrderForm from '../OrderForm/OrderForm';
+import PortfolioContainer from '../Portfolio/PortfolioContainer';
 import QuizContainer from '../Quiz/QuizContainer';
+import ReviewsContainer from '../Reviews/ReviewsContainer';
 
 const links = [
     {
@@ -84,7 +88,11 @@ function LayOut({ title = 'Панорама', description, children }) {
                 objGeolocation={optionGeolocation && geolocation[optionGeolocation]} />
 
             {children}
+            <PortfolioContainer />
             <QuizContainer />
+            <ReviewsContainer />
+            <OrderForm />
+            <Contacts objGeolocation={optionGeolocation && geolocation[optionGeolocation]} />
             <Footer links={links} objGeolocation={optionGeolocation && geolocation[optionGeolocation]} />
         </div>
     )

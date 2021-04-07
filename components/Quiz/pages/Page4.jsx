@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from '../../UI/Button';
 import CheckBox from '../../UI/CheckBox';
 import Input from '../UI/Input';
+import InputWidthHeight from '../UI/InputWidthHeight';
 import InputPhoneMask from '../UI/InputPhoneMask';
 import Select from '../UI/Select';
 
@@ -148,9 +149,9 @@ function Page4({ changePage, dataQuiz, changeProgresBar }) {
                             </Select>
                         </SelectItem>
                         <InputItem>
-                            <Input
+                            <InputWidthHeight
                                 label='Размер'
-                                placeholder='Ширина х высота, например, 1200х1500 мм'
+                                placeholder='(Ширина) х (Высота), например: 1200х1500 мм'
                                 changeMetod={changeState}
                                 value={param.size.value}
                                 id={param.size.id}
@@ -174,7 +175,7 @@ function Page4({ changePage, dataQuiz, changeProgresBar }) {
                         <InputItem>
                             {userData.communicated.value === 'mobile' && < InputPhoneMask
                                 label='Мобильный'
-                                placeholder='+7 (___) - ___ ____'
+                                placeholder='+7 (___) ___-____'
                                 changeMetod={changeState}
                                 value={userData.mobile.value}
                                 id={userData.mobile.id}
@@ -184,7 +185,7 @@ function Page4({ changePage, dataQuiz, changeProgresBar }) {
 
                             {userData.communicated.value === 'whatsApp' && < InputPhoneMask
                                 label='Whatapp'
-                                placeholder='+7 (___) - ___ ____'
+                                placeholder='+7 (___) ___-____'
                                 changeMetod={changeState}
                                 value={userData.whatsApp.value}
                                 id={userData.whatsApp.id}

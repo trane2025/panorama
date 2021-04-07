@@ -1,16 +1,20 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
-function Button({ children, onClick, description, width, animate = true, type }) {
+function ButtonLink({ children, link, description, width, animate = true }) {
     return (
         <Container>
-            <BackGround
-                width={width}
-                onClick={onClick}
-                animate={animate}
-                type={type}>
+            <Link href={link}>
+                <a>
+                    <BackGround
+                        width={width}
+                        animate={animate}>
 
-                {children}
-            </BackGround>
+                        {children}
+                    </BackGround>
+                </a>
+            </Link>
+
             {description && <Description>
                 <i>
                     <svg
@@ -26,7 +30,7 @@ function Button({ children, onClick, description, width, animate = true, type })
     )
 }
 
-export default Button;
+export default ButtonLink;
 
 
 
@@ -53,7 +57,7 @@ const Container = styled.div`
 
 const BackGround = styled.button`
     background-image: linear-gradient( 90deg, rgb(235,226,9) 0%, rgb(255,245,0) 100%);
-    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.17);
+    box-shadow: 0px 6px 8px -3px rgb(183 183 183 / 91%);
     border: none;
     width: ${({ width }) => width ? width : 'none'};
     padding: 20px 50px;

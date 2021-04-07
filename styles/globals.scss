@@ -9,10 +9,12 @@
   list-style: none;
   text-decoration: none;
   outline: none;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'primaryFont';
+  overflow-x: hidden;
 }
 
 h1 {
@@ -47,6 +49,7 @@ p {
 }
 
 a {
+  color: #272727;
   text-decoration: none;
   font-family: 'primaryFont';
   font-weight: 600;
@@ -67,6 +70,7 @@ a {
 .black-text {
   font-weight: 900;
 }
+
 
 
 @keyframes fade {

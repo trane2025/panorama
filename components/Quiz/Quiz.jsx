@@ -23,7 +23,7 @@ function Quiz({
     changeProgresBar }) {
 
     return (
-        <BackGround>
+        <BackGround id='quiz'>
             <Container>
 
                 <WraperQuiz>

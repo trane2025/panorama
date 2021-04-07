@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Input(props) {
+function Input({ type, id, placeholder, changeMetod, value, width }) {
 
-
+    const onChange = (event) => {
+        changeMetod(event.target.value, id);
+    }
 
     return (
-        <InputStyle>
-            <label htmlFor={props.label}>{props.label}</label>
+        <InputStyle width={width}>
             <input
-                type={props.type}
-                id={props.label}
-                placeholder={props.placeholder}
-                value={props.value}
-                onChange={props.onChange} />
+                type={type}
+                id={id}
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange} />
         </InputStyle>
     )
 }
@@ -23,30 +24,21 @@ export default Input;
 
 const InputStyle = styled.div`
 
-    label {
-        display: block;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: #d6d6d6;
-        margin-bottom: 10px;
-        font-family: 'Secondary-font';
-    }
+    
 
     input {
-        width: 370px;
-        height: 45px;
+        width: ${({ width }) => width ? width : '100%'};
+        height: 50px;
         font-size: 16px;
         padding-left: 20px;
         padding-right: 20px;
         border-radius: 0;
         border: none;
-        outline: 1px solid rgb(211, 211, 211);
         transition-duration: .2s;
         
 
         :focus {
-            outline: 1px solid #5B1717;
+            outline: 1px solid #333232;
         }
     }
 
@@ -55,11 +47,6 @@ const InputStyle = styled.div`
             width: 260px;
             height: 35px;
             font-size: 14px;
-        }
-
-        label {
-            font-size: 14px;
-            margin-bottom: 5px;
         }
     }
 `;

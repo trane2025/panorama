@@ -1,8 +1,11 @@
 import styled from 'styled-components';
-import Button from '../UI/Button';
+import ButtonLink from '../UI/ButtonLink';
 import Container from '../UI/Container';
+import { useRouter } from 'next/router'
 
 function Banner() {
+    const { pathname } = useRouter();
+
     return (
         <BackGround>
             <Container>
@@ -30,10 +33,9 @@ function Banner() {
                     </Item>
                 </List>
                 <WraperButton>
-                    <Button
-                    >
+                    <ButtonLink link={`${pathname}/#quiz`}>
                         Узнать стоимость
-                    </Button>
+                    </ButtonLink>
                 </WraperButton>
             </Container>
         </BackGround>

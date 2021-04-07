@@ -2,15 +2,14 @@ import React from 'react';
 import MaskedInput from 'react-text-mask';
 import styled from 'styled-components';
 
-const InputPhoneMask = ({ label, placeholder, changeMetod, value, }) => {
+const InputPhoneMask = ({ placeholder, changeMetod, value, width, id }) => {
 
     const onChange = (event) => {
-        changeMetod(event.target.value);
+        changeMetod(event.target.value, id);
     }
 
     return (
-        <InputStyle>
-            <label>{label}</label>
+        <InputStyle width={width}>
             <MaskedInput
                 mask={['+', '7', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
                 placeholder={placeholder}
@@ -23,37 +22,23 @@ const InputPhoneMask = ({ label, placeholder, changeMetod, value, }) => {
 
 }
 
-
-
-
-
 export default InputPhoneMask;
 
 const InputStyle = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    label {
-        font-weight: 800;
-        font-size: 16px;
-    }
 
     input {
-        width: 74%;
-        height: 40px;
+        width: ${({ width }) => width ? width : '100%'};
+        height: 50px;
         font-size: 16px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
         border-radius: 0;
         border: none;
         transition-duration: .2s;
         
 
         :focus {
-            outline: 1px solid rgb(92, 92, 92);
+            outline: 1px solid #333232;
         }
     }
 
@@ -62,11 +47,6 @@ const InputStyle = styled.div`
             width: 260px;
             height: 35px;
             font-size: 14px;
-        }
-
-        label {
-            font-size: 14px;
-            margin-bottom: 5px;
         }
     }
 `;
