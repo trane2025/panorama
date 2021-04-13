@@ -19,9 +19,10 @@ body {
 
 h1 {
   font-size: 42px;
-  color: #272727;
+  color: #181a26;
   font-family: 'primaryFont';
   font-weight: 900;
+  text-transform: uppercase;
 
   span {
     color: #e31e24;
@@ -30,7 +31,7 @@ h1 {
 }
 
 h2 {
-  color: #272727;
+  color: #1e1e1e;
   font-weight: 900;
   font-size: 36px;
   text-transform: uppercase;
@@ -39,28 +40,36 @@ h2 {
 
 h3 {
   font-size: 24px;
-  color: #272727;
+  color: #1e1e1e;
   font-weight: 800;
 }
 
+h4 {
+  color: #1e1e1e;
+}
+
 p {
-  color: #272727;
+  color: #1e1e1e;
   font-size: 16px;
 }
 
 a {
-  color: #272727;
+  color: #1e1e1e;
   text-decoration: none;
   font-family: 'primaryFont';
   font-weight: 600;
 }
 
 .yellow-text {
-  color: #ebd807;
+  color: #fff825;
 }
 
 .red-text {
   color: #e31e24;
+}
+
+.white-text {
+  color: white;
 }
 
 .bold-text {

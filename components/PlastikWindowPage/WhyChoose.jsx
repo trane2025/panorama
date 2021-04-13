@@ -52,7 +52,7 @@ const WraperText = styled.div`
         color: white;
 
         span {
-            color: #ebd807;
+            color: #ffea00;
         }
     }
 
@@ -66,7 +66,7 @@ const WraperText = styled.div`
         line-height: 40px;
 
         span {
-            color: #ebd807; 
+            color: #ffea00; 
         }
     }
 `;
@@ -74,7 +74,7 @@ const WraperText = styled.div`
 
 const ListMessangers = styled.ul`
     li {
-        background-color: #ebd807;
+        background-color: #ffea00;
         padding: 15px 20px;
         width: fit-content;
         margin-bottom: 15px;

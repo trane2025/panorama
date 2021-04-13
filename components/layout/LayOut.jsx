@@ -15,11 +15,11 @@ const links = [
     },
     {
         title: 'Остекление',
-        url: '/'
+        url: '/osteklenie'
     },
     {
         title: 'Деревянные окна',
-        url: '/'
+        url: '/derevyannye-okna'
     },
     {
         title: 'Пластиковые окна',

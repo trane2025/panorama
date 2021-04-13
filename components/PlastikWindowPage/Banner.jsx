@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ButtonLink from '../UI/ButtonLink';
 import Container from '../UI/Container';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 function Banner() {
     const { pathname } = useRouter();

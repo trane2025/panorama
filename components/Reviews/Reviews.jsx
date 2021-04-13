@@ -169,7 +169,7 @@ const ColorYelow = styled.span`
 
 const Section = styled.section`
     background: url('/images/reviews/reviews-min.png') center center repeat;
-    background-color: #2c2c2c;
+    background-color: #181a26;
     padding: 100px 0;
     height: auto;
 `;

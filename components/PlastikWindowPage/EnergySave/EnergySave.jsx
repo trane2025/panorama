@@ -119,7 +119,7 @@ const Item = styled.li`
 
 const TitleEconomy = styled.div`
   
-    background-color: ${({ summer }) => summer ? 'rgb(235, 216, 7)' : '#10385b'};
+    background-color: ${({ summer }) => summer ? 'rgb(255 235 12)' : '#10385b'};
     box-shadow: 0px 0px 21px 0px rgba(39, 39, 39, 0.2);
     padding: 15px 30px;
     

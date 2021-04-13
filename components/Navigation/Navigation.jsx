@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Navigation({ links, optionValue, onchangeOption, objGeolocation }) {
     return (
-        <>
+        <NavigationWraper>
             <NavTop>
                 <Container>
                     <NavTopContainer>
@@ -87,11 +87,16 @@ function Navigation({ links, optionValue, onchangeOption, objGeolocation }) {
                     </List>
                 </Container>
             </NavBottom>
-        </>
+        </NavigationWraper>
     )
 }
 
 export default Navigation;
+
+const NavigationWraper = styled.div`
+    position: relative;
+    z-index: 10;
+`;
 
 const WraperSocialMedia = styled.div`
     a {
@@ -165,7 +170,7 @@ const NavTopContainer = styled.div`
 
 
 const NavBottom = styled.nav`
-    background-color: #242424;
+    background-color: #1e1e1e;
     
 `;
 

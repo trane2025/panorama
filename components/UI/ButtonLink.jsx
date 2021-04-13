@@ -23,7 +23,7 @@ function ButtonLink({ children, link, description, width, animate = true }) {
                             d="M2.032,17.184 C2.032,17.184 47.371,44.922 85.202,1.038 " />
                     </svg>
                 </i>
-                <p>{description}</p>
+                <DescriptionText>{description}</DescriptionText>
             </Description>}
         </Container>
 
@@ -41,13 +41,18 @@ const Description = styled.div`
     right: -280px;
     bottom: -45px;
 
-    p {
-        max-width: 240px;
-        font-weight: 800;
-        position: relative;
-        top: -50px;
-        left: -10px;
-    }
+    
+`;
+
+const DescriptionText = styled.div`
+    
+    max-width: 240px;
+    font-weight: 800;
+    position: relative;
+    top: -50px;
+    left: -10px;
+    font-size: 16px;
+    
 `;
 
 const Container = styled.div`

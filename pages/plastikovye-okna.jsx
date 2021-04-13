@@ -6,7 +6,9 @@ import EnergySave from '../components/PlastikWindowPage/EnergySave/EnergySave'
 import Production from '../components/PlastikWindowPage/Production'
 import SoundIsolation from '../components/PlastikWindowPage/SoundIsolation/SoundIsolation'
 import WhyChoose from '../components/PlastikWindowPage/WhyChoose'
-import QuizContainer from '../components/Quiz/QuizContainer'
+
+
+
 
 function plastikovyeOkna() {
     return (
