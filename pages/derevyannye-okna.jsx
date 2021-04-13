@@ -19,7 +19,7 @@ const advantagesArr = [
         description: 'При покрытии древесины специальным лаком, ее долговечность увеличивается в несколько раз. Используемые нами материалы не разбухают от влаги и не растрескиваются от жары',
         number: '02',
         image: '/images/woodsWindow/advantegesWoods/image2.png',
-
+        textWidth: '300px'
     },
     {
         title: 'Экологичность',
@@ -29,7 +29,8 @@ const advantagesArr = [
         stretch: true,
         right: true,
         stretchHeight: '533px',
-        colorNumber: '#fffef3'
+        colorNumber: '#fffef3',
+        textWidth: '256px'
     },
     {
         title: 'Пожаробезопасность',

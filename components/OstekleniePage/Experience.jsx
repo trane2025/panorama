@@ -32,6 +32,7 @@ const Section = styled.section`
 
 
 const Wraper20Years = styled.div`
+    position: relative;
     z-index: 2;
     position: relative;
     margin-top: 30px;
@@ -65,6 +66,8 @@ const Year20 = styled.h3`
 `;
 
 const SubTitle = styled.p`
+    position: relative;
+    z-index: 2;
     font-size: 30px;
     padding-left: 50px;
     font-weight: 600;
@@ -84,7 +87,7 @@ const Right = styled.div`
     padding-top: 115px;
     position: relative;
 
-    ::before {
+    ::after {
         content: '';
         display: block;
         width: 10000px;
@@ -94,11 +97,14 @@ const Right = styled.div`
         position: absolute;
         left: 0;
         top: 0;
+        z-index: 0;
     }
 
     h2 {
         padding-left: 50px;
         margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
     }
 `;
 
