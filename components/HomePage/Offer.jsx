@@ -14,13 +14,13 @@ function Offer() {
                         title='Деревянные окна'
                         description='Экологически чистые, они придадут Вашему дому комфорт и уют'
                         number='01'
-                        href='/' />
+                        href='/derevyannye-okna' />
                     <OfferItem
                         image='/images/homePage/derevo-al.png'
                         title='дерево-алюминиевые окна'
                         description='Более устойчивые к механическим и атмосферным воздействиям'
                         number='02'
-                        href='/' />
+                        href='/derevyannye-okna' />
                     <OfferItem
                         image='/images/homePage/plastik.png'
                         title='Пластиковые окна'
@@ -38,7 +38,7 @@ function Offer() {
                         colorBack='#202336'
                         colorNumber='#383d5b'
                         colorText='white'
-                        href='/'
+                        href='/aluminum'
                     />
                 </ListOffer>
             </Container>
