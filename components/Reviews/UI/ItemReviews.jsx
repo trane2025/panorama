@@ -88,5 +88,5 @@ const UsersCircle = styled.div`
 const Item = styled.li`
     background-color: white;
     padding: 50px;
-    border-radius: 0px 20px 20px 20px;
+    /* border-radius: 0px 20px 20px 20px; */
 `;

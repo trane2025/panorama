@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Contacts from '../Contacts/Contacts';
 import Footer from '../Footer/Footer';
@@ -27,11 +28,11 @@ const links = [
     },
     {
         title: 'Алюминиевые конструкции',
-        url: '/'
+        url: '/aluminum'
     },
     {
         title: 'Жалюзи / Рольшторы',
-        url: '/'
+        url: '/zhalyuzi-rolshtory'
     }
 ]
 
@@ -52,7 +53,12 @@ const geolocation = {
 
 const KEY_STORAGE = 'geolocation';
 
-function LayOut({ title = 'Панорама', description, children }) {
+function LayOut({ title = 'Панорама', description, children, noPortfolio, noQuiz }) {
+
+
+    const { pathname } = useRouter();
+
+
 
     const [optionGeolocation, setOptionGeolocation] = useState('');
 
@@ -73,7 +79,7 @@ function LayOut({ title = 'Панорама', description, children }) {
     }
 
     return (
-        <div>
+        <>
             <Head>
                 <title>{`${title}`}</title>
                 <meta name="description" content={description} />
@@ -85,16 +91,20 @@ function LayOut({ title = 'Панорама', description, children }) {
                 links={links}
                 optionValue={optionGeolocation}
                 onchangeOption={onchangeOption}
-                objGeolocation={optionGeolocation && geolocation[optionGeolocation]} />
+                objGeolocation={optionGeolocation && geolocation[optionGeolocation]}
+                pathname={pathname} />
 
             {children}
-            <PortfolioContainer />
-            <QuizContainer />
+            {!noPortfolio && <PortfolioContainer />}
+            {!noQuiz && <QuizContainer />}
             <ReviewsContainer />
             <OrderForm />
             <Contacts objGeolocation={optionGeolocation && geolocation[optionGeolocation]} />
-            <Footer links={links} objGeolocation={optionGeolocation && geolocation[optionGeolocation]} />
-        </div>
+            <Footer
+                links={links}
+                objGeolocation={optionGeolocation && geolocation[optionGeolocation]}
+                pathname={pathname} />
+        </>
     )
 }
 

@@ -85,7 +85,6 @@ const Next = styled.button`
     position: absolute;
     right: 95px;
     height: 80%;
-    border-radius: 10px;
 
 
 
@@ -118,7 +117,6 @@ const Prev = styled.button`
     position: absolute;
     left: 95px;
     height: 80%;
-    border-radius: 10px;
 
 
 

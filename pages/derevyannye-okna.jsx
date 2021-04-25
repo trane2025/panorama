@@ -2,6 +2,7 @@ import React from 'react'
 import LayOut from '../components/layout/LayOut';
 import ProductionWoods from '../components/PlastikWindowPage/ProductionWoods';
 import Advanteges from '../components/UI/Advanteges/Advanteges';
+import MainContainer from '../components/UI/MainContainer';
 import Banner from '../components/WoodsWindowPage/Banner';
 import MaterialsAndTehnology from '../components/WoodsWindowPage/MaterialsAndTehnology';
 import UseWoods from '../components/WoodsWindowPage/UseWoods/UseWoods';
@@ -68,16 +69,18 @@ const advantagesArr = [
 
 function derevyannyeOkna() {
     return (
-        <LayOut title='Деревянные окна'>
-            <Banner />
-            <WhyWoodsWindow />
-            <UseWoods />
-            <Advanteges advantagesArr={advantagesArr}>
-                <h2>Преимущества <span className='red-text'>деревянных</span> <br /> конструкций</h2>
-            </Advanteges>
-            <MaterialsAndTehnology />
-            <ProductionWoods />
-        </LayOut>
+        <MainContainer>
+            <LayOut title='Деревянные окна'>
+                <Banner />
+                <WhyWoodsWindow />
+                <UseWoods />
+                <Advanteges advantagesArr={advantagesArr}>
+                    <h2>Преимущества <span className='red-text'>деревянных</span> <br /> конструкций</h2>
+                </Advanteges>
+                <MaterialsAndTehnology />
+                <ProductionWoods />
+            </LayOut>
+        </MainContainer>
     )
 }
 

@@ -4,19 +4,23 @@ import Offer from "../components/HomePage/Offer";
 import ProfessionalWorks from "../components/HomePage/ProfessionalWorks";
 import WhyChangeWindows from "../components/HomePage/WhyChangeWindows";
 import LayOut from "../components/layout/LayOut";
+import MainContainer from "../components/UI/MainContainer";
 
 
 
 
 const HomePage = () => {
   return (
-    <LayOut title={'Главная'}>
-      <Banner />
-      <WhyChangeWindows />
-      <HardСhoice />
-      <ProfessionalWorks />
-      <Offer />
-    </LayOut>
+    <MainContainer>
+      <LayOut title={'Главная'}>
+        <Banner />
+        <WhyChangeWindows />
+        <HardСhoice />
+        <ProfessionalWorks />
+        <Offer />
+      </LayOut>
+    </MainContainer>
+
   )
 }
 

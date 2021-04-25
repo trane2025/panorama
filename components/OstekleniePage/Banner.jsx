@@ -12,7 +12,7 @@ function Banner() {
                 <FlexContainer>
                     <WraperText>
                         <h1>Остекление <br /> в Астрахани</h1>
-                        <p>балконов, лоджий, <br /> квартир, домов <br /> и коттеджей</p>
+                        <p>балконов, лоджий, квартир, домов и коттеджей</p>
                         <ButtonLink link={`${pathname}/#quiz`}>
                             Узнать стоимость
                     </ButtonLink>
@@ -52,13 +52,13 @@ const WraperBanner = styled.div`
 `;
 
 const WraperText = styled.div`
-    padding-top: 100px;
+    padding-top: 150px;
     padding-right: 85px;
     h1 {
         width: 364px;
     }
     p {
-        font-size: 30px;
+        font-size: 24px;
         margin-top: 20px;
         margin-bottom: 30px;
     }

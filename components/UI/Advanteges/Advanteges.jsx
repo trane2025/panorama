@@ -47,6 +47,9 @@ const Section = styled.section`
 const List = styled.ul`
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
     margin: 0 -15px;
     margin-top: 50px;
 `;

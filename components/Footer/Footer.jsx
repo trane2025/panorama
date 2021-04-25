@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import Container from '../UI/Container';
 
-function Footer({ links, objGeolocation }) {
+function Footer({ links, objGeolocation, pathname }) {
 
 
     return (
@@ -35,13 +35,13 @@ function Footer({ links, objGeolocation }) {
                         <li>
                             <Title>Категории</Title>
                         </li>
-                        {links.map(item => {
+                        {links.map(link => {
                             return (
-                                <li key={item.title}>
-                                    <Link href={item.url}>
-                                        <a>{item.title}</a>
+                                <ItemLink key={link.title} active={pathname === link.url}>
+                                    <Link href={link.url}>
+                                        <a>{link.title}</a>
                                     </Link>
-                                </li>
+                                </ItemLink>
                             )
                         })}
                     </WraperLinks>
@@ -137,6 +137,18 @@ function Footer({ links, objGeolocation }) {
 
 export default Footer;
 
+const ItemLink = styled.li`
+    margin-bottom: 12px;
+
+    a {
+        color: ${({ active }) => active ? '#f3ef87' : 'white'};
+        :hover {
+            color: #f3ef87;
+            transition-duration: .2s;
+        }
+    }
+`;
+
 const InfoContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -198,27 +210,18 @@ const WraperContact = styled.ul`
 `;
 
 const WraperLinks = styled.ul`
-    a {
-        color: #cfcfcf;
-        font-weight: 400;
-
-        :hover {
-            color: white;
-        }
-    }
-
     li {
         margin-bottom: 12px;
     }
 `;
 
 const Section = styled.footer`
-    background-color: #1e1e1e;
+    background-color: #171925;
     padding: 30px 0;
 
     
     hr {
-        border: 1px solid #3b3b3b;
+        border: 1px solid #2a2d41;
         width: 100%;
         margin-top: 10px;
         margin-bottom: 20px;

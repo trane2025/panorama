@@ -189,7 +189,7 @@ const Right = styled.div`
     padding-bottom: 100px;
     width: 230px;
 
-    ::before {
+    ::after {
         content: '';
         display: block;
         position: absolute;

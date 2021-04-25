@@ -31,8 +31,9 @@ const Section = styled.section`
     background: url('/images/homePage/banner.jpg') top center no-repeat;
 
     p {
-        font-size: 30px;
-        margin: 20px 0; 
+        font-size: 24px;
+        margin-top: 15px;
+        margin-bottom: 25px;
     }
 
     

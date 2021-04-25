@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Container from '../UI/Container';
 import Link from 'next/link'
 
-function Navigation({ links, optionValue, onchangeOption, objGeolocation }) {
+function Navigation({ links, optionValue, onchangeOption, objGeolocation, pathname }) {
     return (
         <NavigationWraper>
             <NavTop>
@@ -76,11 +76,11 @@ function Navigation({ links, optionValue, onchangeOption, objGeolocation }) {
                     <List>
                         {links.map(link => {
                             return (
-                                <li key={link.title}>
+                                <ItemLink key={link.title} active={pathname === link.url}>
                                     <Link href={link.url}>
                                         <a>{link.title}</a>
                                     </Link>
-                                </li>
+                                </ItemLink>
                             )
                         })}
 
@@ -92,6 +92,20 @@ function Navigation({ links, optionValue, onchangeOption, objGeolocation }) {
 }
 
 export default Navigation;
+
+const ItemLink = styled.li`
+     
+    padding: 15px 20px;
+    
+
+    a {
+        color: ${({ active }) => active ? '#f3ef87' : 'white'};
+        :hover {
+            color: #f3ef87;
+            transition-duration: .2s;
+        }
+    }
+`;
 
 const NavigationWraper = styled.div`
     position: relative;
@@ -170,7 +184,7 @@ const NavTopContainer = styled.div`
 
 
 const NavBottom = styled.nav`
-    background-color: #1e1e1e;
+    background-color: #171925;
     
 `;
 
@@ -178,15 +192,5 @@ const List = styled.ul`
     display: flex;
     justify-content: center;
     
-    li {
-        padding: 15px 20px;
-    }
-
-    a {
-        color: white;
-        :hover {
-            color: #f3ef87;
-            transition-duration: .2s;
-        }
-    }
+   
 `;

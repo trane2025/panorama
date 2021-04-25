@@ -1,6 +1,12 @@
 
 
+html * {
+  max-height: 100000000px;
+}
 
+section {
+  display: block;
+}
 
 * {
   box-sizing: border-box;
@@ -14,12 +20,11 @@
 
 body {
   font-family: 'primaryFont';
-  overflow-x: hidden;
 }
 
 h1 {
   font-size: 42px;
-  color: #181a26;
+  color: #1e1e1e;
   font-family: 'primaryFont';
   font-weight: 900;
   text-transform: uppercase;

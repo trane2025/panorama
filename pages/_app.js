@@ -5,21 +5,26 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import '../styles/swiperGlobal.scss';
+import NextNprogress from 'nextjs-progressbar';
 
-import { Provider } from 'react-redux';
-import { useStore } from '../redux/store';
+
 
 
 
 
 
 export default function App({ Component, pageProps }) {
-  const store = useStore(pageProps.initialReduxState)
+
   return (
     <>
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
+      <NextNprogress
+        color="#ffd138"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height="3"
+        options={{ easing: 'ease', speed: 500 }}
+      />
+      <Component {...pageProps} />
     </>
   )
 }

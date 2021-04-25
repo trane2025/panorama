@@ -4,6 +4,7 @@ import Experience from "../components/OstekleniePage/Experience";
 import Question from "../components/OstekleniePage/Question";
 import WhereToApply from "../components/OstekleniePage/WhereToApply";
 import Advanteges from "../components/UI/Advanteges/Advanteges";
+import MainContainer from "../components/UI/MainContainer";
 
 
 const advantagesArr = [
@@ -74,15 +75,17 @@ const advantagesArr = [
 function osteklenie() {
 
     return (
-        <LayOut title='Остекление'>
-            <Banner />
-            <Question />
-            <WhereToApply />
-            <Experience />
-            <Advanteges advantagesArr={advantagesArr}>
-                <h2>ПРЕИМУЩЕСТВА<span className='red-text'> ОКОННЫХ</span><br />КОНСТРУКЦИЙ ОТ «ПАНОРАМА»</h2>
-            </Advanteges>
-        </LayOut>
+        <MainContainer>
+            <LayOut title='Остекление'>
+                <Banner />
+                <Question />
+                <WhereToApply />
+                <Experience />
+                <Advanteges advantagesArr={advantagesArr}>
+                    <h2>ПРЕИМУЩЕСТВА<span className='red-text'> ОКОННЫХ</span><br />КОНСТРУКЦИЙ ОТ «ПАНОРАМА»</h2>
+                </Advanteges>
+            </LayOut>
+        </MainContainer>
     )
 }
 
