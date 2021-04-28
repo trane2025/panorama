@@ -49,7 +49,7 @@ const Button = styled.a`
         height: 120px;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
 
         right: 15px;
         bottom: 20px;

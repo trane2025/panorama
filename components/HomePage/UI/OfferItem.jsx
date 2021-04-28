@@ -44,6 +44,18 @@ const WraperOfferText = styled.div`
         color: ${({ colorText }) => colorText ? colorText : '#181a26'};
     }
     
+    @media (max-width: 670px) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+
+        p {
+            min-width: 240px;
+            max-width: 240px;
+            width: 240px;
+        }
+    }
+
     @media (max-width: 480px) {
         width: 100%;
         margin: 0;
@@ -62,6 +74,12 @@ const WraperOfferText = styled.div`
 const WraperImage = styled.div`
     padding-right: 20px;
 
+    @media (max-width: 670px) {
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+    }
+
     @media (max-width: 480px) {
         position: absolute;
         right: -20px;
@@ -79,6 +97,12 @@ const NumberOffer = styled.h3`
     font-size: 145px;
     bottom: -27px;
     color: ${({ numberColor }) => numberColor ? numberColor : '#e0e0e0'};
+
+    @media (max-width: 670px) {
+        font-size: 100px;
+        bottom: -19px;
+        left: 20px;
+    }
 
     @media (max-width: 480px) {
         font-size: 100px;
@@ -100,12 +124,19 @@ const ItemOffer = styled.li`
         justify-content: space-between;
     }
 
+    @media (max-width: 670px) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+        min-height: 300px;
+        display: block;
+    }
+
     @media (max-width: 480px) {
         width: 100%;
         margin: 0;
         margin-bottom: 15px;
         min-height: 335px;
         display: block;
-
     }
 `;

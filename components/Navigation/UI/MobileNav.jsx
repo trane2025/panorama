@@ -143,7 +143,7 @@ const WraperMobileNav = styled.div`
         display: flex;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         height: 100%;
         padding: 0;
         display: flex;

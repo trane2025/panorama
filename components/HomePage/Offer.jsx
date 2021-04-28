@@ -58,6 +58,10 @@ const Section = styled.section`
         color: white;
     }
 
+    @media (max-width: 670px) {
+        padding: 60px 0;
+    }
+
     @media (max-width: 480px) {
         padding: 40px 0;
     }
@@ -68,6 +72,11 @@ const ListOffer = styled.ul`
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 670px) {
+        margin: 0;
+        margin-top: 30px;
+    }
 
     @media (max-width: 480px) {
         margin: 0;

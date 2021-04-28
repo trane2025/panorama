@@ -36,14 +36,29 @@ const Section = styled.section`
         margin-bottom: 25px;
     }
 
+    @media (max-width: 670px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background: url('/images/homePage/banner.jpg') bottom right no-repeat;
+        background-size: 1220px;
+        background-position-x: -336px;
+        background-color: #fcfaf2;
+
+        p {
+            font-size: 20px;
+            line-height: 25px;
+            margin-top: 0;
+        }
+    }
+
     @media (max-width: 480px){
 
         padding-top: 45px;
         padding-bottom: 231px;
         background: url('/images/homePage/banner.jpg') bottom center no-repeat;
         background-size: 650px;
+        background-color: #fffbe7;
         background-position-x: -279px;
-        background-color: #fcfaf2;
 
 
 
@@ -54,10 +69,17 @@ const Section = styled.section`
             margin-top: 0;
         }
     }
+
+    
 `;
 
 const Title = styled.h1`
     line-height: 54px;
+
+    @media (max-width: 670px) {
+        line-height: 36px;
+        margin-bottom: 10px;
+    }
 
     @media (max-width: 480px){
         line-height: 30px;

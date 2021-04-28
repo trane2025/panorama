@@ -133,7 +133,10 @@ const ArrowNext = styled.div`
         }
     }
 
-    
+    @media (max-width: 670px) {
+        width: 40px;
+        height: 40px;
+    }
 `;
 
 const ArrowPrev = styled.div`
@@ -161,7 +164,10 @@ const ArrowPrev = styled.div`
         }
     }
 
-    
+    @media (max-width: 670px) {
+        width: 40px;
+        height: 40px;
+    }
 `;
 
 const Section = styled.section`
@@ -170,16 +176,41 @@ const Section = styled.section`
     h2 {
         margin-bottom: 50px;
     }
+
+    @media (max-width: 1200px){
+        h2 {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 670px){
+        h2 {
+            margin-bottom: 30px;
+        }
+    }
 `;
 
 const FlexContainer = styled.div`
     display: flex;
+
+    @media (max-width: 1200px){
+        justify-content: center;
+    }
 `;
 
 const Left = styled.div`
     padding-top: 100px;
     padding-right: 50px;
     padding-bottom: 100px;
+
+    @media (max-width: 1200px){
+        padding-right: 0;
+    }
+
+    @media (max-width: 670px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 `;
 
 const Right = styled.div`
@@ -201,6 +232,10 @@ const Right = styled.div`
 
         pointer-events: none;
         box-sizing: border-box;
+    }
+
+    @media (max-width: 1200px){
+        display: none;
     }
 `;
 
@@ -226,6 +261,21 @@ const PrimeryImageList = styled.ul`
         }
         
     }
+
+    @media (max-width: 960px) {
+        width: 600px;
+        height: 400px;
+    }
+
+    @media (max-width: 670px) {
+        width: 460px;
+        height: 260px;
+    }
+
+    @media (max-width: 480px) {
+        width: 360px;
+        height: 160px;
+    }
 `;
 
 const ImageItem = styled.li`
@@ -240,6 +290,21 @@ const ImageItem = styled.li`
     img {
         width: auto;
         height: 100%;
+    }
+
+    @media (max-width: 960px) {
+        width: 600px;
+        height: 400px;
+    }
+
+    @media (max-width: 670px) {
+        width: 460px;
+        height: 260px;
+    }
+
+    @media (max-width: 480px) {
+        width: 360px;
+        height: 160px;
     }
 
 `;
@@ -294,7 +359,7 @@ const ItemSlider = styled.li`
         transition: .3s;
     }
 
-    
+
 `;
 
 

@@ -44,18 +44,35 @@ export default ProfessionalWorks;
 
 const YearsIconWraper = styled.div`
     position: absolute;
-    bottom: 2px;
+    bottom: -7px;
     left: -119px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
+        position: relative;
+        width: fit-content;
         left: 0;
-        bottom: -5px;
+        bottom: 58px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    @media (max-width: 480px) {
+        bottom: 59px;
     }
 `;
 
 const Student = styled.img`
     position: relative;
     top: 52px;
+
+    @media (max-width: 670px) {
+        left: 0;
+        top: 28px;
+        height: 230px;
+        width: auto;
+    }
 
     @media (max-width: 480px) {
         left: 0;
@@ -70,12 +87,19 @@ const Chaild = styled.img`
     left: -170px;
     bottom: -10px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         display: none;
     }
+
 `;
 
 const YearsIcon = styled.img`
+    @media (max-width: 670px) {
+        height: 230px;
+        width: auto;
+        bottom: 0;
+    }
+
     @media (max-width: 480px) {
         height: 150px;
         width: auto;
@@ -100,9 +124,15 @@ const Right = styled.div`
         top: 0;
     }
 
-    @media (max-width: 480px){
-        height: 300px;
+    @media (max-width: 670px){
+        height: 400px;
+        ::before {
+            width: 100%;
+        }
+    }
 
+    @media (max-width: 480px){
+        height: 260px;
         ::before {
             width: 600px;
         }
@@ -116,7 +146,7 @@ const Section = styled.section`
 const FlexCotainer = styled.section`
     display: flex;
 
-    @media (max-width: 480px){
+    @media (max-width: 670px){
         display: block;
     }
 `;
@@ -139,10 +169,15 @@ const Left = styled.div`
         }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         min-width: fit-content;
         padding-bottom: 40px;
         padding-top: 40px;
+        padding-right: 0;
+        
+    }
+
+    @media (max-width: 480px) {
         h2 {
             text-align: center;
             min-width: initial;
@@ -154,9 +189,12 @@ const SubTitle = styled.p`
     font-size: 24px;
     margin-top: 15px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         font-size: 16px;
         max-width: 210px;
+    }
+
+    @media (max-width: 480px) {
         text-align: center;
         margin: 10px auto;
     }
@@ -186,6 +224,11 @@ const WraperAdvatages = styled.li`
         font-size: 18px;
         font-weight: 600;
         padding-left: 20px;
+    }
+
+    @media (max-width: 670px) {
+
+        
     }
 
     @media (max-width: 480px) {

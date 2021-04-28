@@ -52,10 +52,15 @@ const Section = styled.section`
     padding-top: 100px;
     background-color: #fbeecb;
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         background: url('/images/homePage/girl.png') no-repeat bottom;
         background-color: #fce9ad;
         padding-top: 40px;
+        background-size: 470px;
+        background-position-x: center;
+    }
+
+    @media (max-width: 480px) {
         background-size: 350px;
         background-position-x: -50px;
     }
@@ -68,7 +73,7 @@ const Wraper = styled.div`
     min-height: 630px;
     background-position-x: 315px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         display: block;
         background: none;
         min-height: 550px;
@@ -83,7 +88,7 @@ const TitleWraper = styled.div`
     padding: 35px 65px;
     margin-bottom: 60px;
     
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         border-radius: 10px 10px 0px 10px;
         margin-bottom: 20px;
         padding: 15px 20px;
@@ -106,7 +111,7 @@ const QustionWraper = styled.div`
         font-size: 30px;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
 
         border-radius: ${({ direction }) => direction === 'left' ? '10px 10px 10px 0px' : '10px 10px 0px 10px'};
         padding: 15px 20px;
@@ -115,7 +120,7 @@ const QustionWraper = styled.div`
         h3 {
             font-size: 18px;
         }
-    }    
+    }
 `;
 
 const Left = styled.div`

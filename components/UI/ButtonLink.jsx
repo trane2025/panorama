@@ -41,7 +41,7 @@ const Description = styled.div`
     right: -280px;
     bottom: -45px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         display: none;
     }
 `;

@@ -32,10 +32,17 @@ export default WhyChangeWindows;
 const FlexContainer = styled.div`
     display: flex;
 
+    @media (max-width: 670px) {
+        display: block;
+        position: relative;
+    }
+
     @media (max-width: 480px) {
         display: block;
         position: relative;
     }
+
+    
 `;
 
 const TextWhy = styled.div`
@@ -51,6 +58,20 @@ const TextWhy = styled.div`
         font-size: 24px;
         font-weight: 600;
         color: ${({ colorText }) => colorText ? colorText : '#181a26'};
+    }
+
+    @media (max-width: 670px) {
+        padding: 20px;
+        max-width: 350px;
+        min-width: 350px;
+        border-radius: 10px 10px 0px 10px;
+        margin-top: 20px;
+        position: relative;
+        z-index: 3;
+        p {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     @media (max-width: 480px) {
@@ -71,7 +92,7 @@ const TextWhy = styled.div`
 const Section = styled.section`
     background-image: linear-gradient( 127deg, rgb(192,24,24) 0%, rgb(248,61,61) 100%);
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         overflow: hidden;
     }
 `;
@@ -87,6 +108,16 @@ const Left = styled.div`
 
     h2 {
         margin-bottom: 20px;
+    }
+
+    @media (max-width: 670px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        height: 590px;
+        
+        h2 {
+            margin-bottom: 8px;
+        }
     }
 
     @media (max-width: 480px) {
@@ -108,16 +139,28 @@ const Right = styled.div`
     width: 100%;
     min-height: 758px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         position: absolute;
         bottom: 0;
     }
+
+    
 `;
 
 const ImageBackground = styled.img`
     position: absolute;
     left: 0;
     top: 0;
+
+    @media (max-width: 670px) {
+        width: auto;
+        top: initial;
+        bottom: 0;
+        height: 310px;
+        left: 270px;
+        bottom: 0;
+        z-index: 2;
+    }
 
     @media (max-width: 480px) {
         width: auto;
@@ -135,11 +178,17 @@ const ImageHome = styled.img`
     bottom: 0;
     left: -175px;
 
-    @media (max-width: 480px) {
+    @media (max-width: 670px) {
         width: auto;
         height: 245px;
+        left: initial;
+        right: -20px;
+        z-index: 4;
+        bottom: -10px;
+    }
+
+    @media (max-width: 480px) {
         right: 10px;
         left: 0;
-        z-index: 4;
     }
 `;
