@@ -33,6 +33,10 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+
+    @media (max-width: 670px){
+        height: initial;
+    }
 `;
 
 const Section = styled.div`
@@ -43,6 +47,12 @@ const Section = styled.div`
 
     h3 {
         margin-bottom: 10px;
+    }
+
+    @media (max-width: 670px){
+        h3 {
+            margin-bottom: 0;
+        }
     }
 `;
 

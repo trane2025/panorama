@@ -47,14 +47,21 @@ const YearsIconWraper = styled.div`
     bottom: -7px;
     left: -119px;
 
+    @media (max-width: 960px) {
+        position: relative;
+        left: initial;
+        bottom: 78px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     @media (max-width: 670px) {
         position: relative;
         width: fit-content;
         left: 0;
         bottom: 58px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        
         margin: 0 auto;
     }
 
@@ -65,7 +72,18 @@ const YearsIconWraper = styled.div`
 
 const Student = styled.img`
     position: relative;
-    top: 52px;
+    top: 43px;
+
+    @media (max-width: 1200px) {
+        height: 330px;
+    }
+
+    @media (max-width: 960px) {
+        left: 0;
+        top: 28px;
+        height: 230px;
+        width: auto;
+    }
 
     @media (max-width: 670px) {
         left: 0;
@@ -87,13 +105,31 @@ const Chaild = styled.img`
     left: -170px;
     bottom: -10px;
 
-    @media (max-width: 670px) {
+    @media (max-width: 1200px) {
+        height: 280px;
+        width: auto;
+        left: -135px;
+    }
+
+    @media (max-width: 960px) {
         display: none;
     }
 
 `;
 
 const YearsIcon = styled.img`
+
+    @media (max-width: 1200px) {
+        height: 300px;
+    }
+
+    @media (max-width: 960px) {
+        height: 250px;
+        width: auto;
+        bottom: 0;
+    }
+
+
     @media (max-width: 670px) {
         height: 230px;
         width: auto;
@@ -124,19 +160,22 @@ const Right = styled.div`
         top: 0;
     }
 
-    @media (max-width: 670px){
+    @media (max-width: 960px){
         height: 400px;
         ::before {
             width: 100%;
         }
     }
 
+    @media (max-width: 670px){
+        height: 400px;
+    }
+
     @media (max-width: 480px){
         height: 260px;
-        ::before {
-            width: 600px;
-        }
     }
+
+    
 `;
 
 const Section = styled.section`
@@ -146,7 +185,7 @@ const Section = styled.section`
 const FlexCotainer = styled.section`
     display: flex;
 
-    @media (max-width: 670px){
+    @media (max-width: 960px){
         display: block;
     }
 `;
@@ -167,6 +206,20 @@ const Left = styled.div`
         li:last-child {
             margin-bottom: 0;
         }
+    }
+
+    @media (max-width: 1200px) {
+        min-width: 550px;
+        
+    } 
+    
+    
+    @media (max-width: 960px) {
+        min-width: fit-content;
+        padding-bottom: 50px;
+        padding-top: 50px;
+        padding-right: 0;
+        
     }
 
     @media (max-width: 670px) {

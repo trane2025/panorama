@@ -52,9 +52,20 @@ const Section = styled.section`
     padding-top: 100px;
     background-color: #fbeecb;
 
-    @media (max-width: 670px) {
+    @media (max-width: 1200px) {
+        padding-top: 70px;
+    }
+
+    @media (max-width: 960px) {
         background: url('/images/homePage/girl.png') no-repeat bottom;
         background-color: #fce9ad;
+        padding-top: 70px;
+        background-size: 470px;
+        background-position-x: left;
+        padding: 50px 0;
+    }
+
+    @media (max-width: 670px) {
         padding-top: 40px;
         background-size: 470px;
         background-position-x: center;
@@ -73,9 +84,19 @@ const Wraper = styled.div`
     min-height: 630px;
     background-position-x: 315px;
 
-    @media (max-width: 670px) {
+
+    @media (max-width: 1200px){
+        background-size: 600px;
+        background-position-x: 245px;
+    }
+
+    @media (max-width: 960px) {
         display: block;
         background: none;
+        min-height: 600px;
+    }
+
+    @media (max-width: 670px) {
         min-height: 550px;
     }
 `;
@@ -109,6 +130,12 @@ const QustionWraper = styled.div`
     h3 {
         font-weight: 900;
         font-size: 30px;
+    }
+
+    @media (max-width: 1200px) {
+        h3 {
+            font-size: 24px;
+        }
     }
 
     @media (max-width: 670px) {

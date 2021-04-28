@@ -36,6 +36,19 @@ const Section = styled.section`
         margin-bottom: 25px;
     }
 
+
+    @media (max-width: 1200px) {
+        
+        background: url('/images/homePage/banner.jpg') bottom center no-repeat;
+        background-size: cover;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        p {
+            margin: 10px 0;
+        }
+    }
+
     @media (max-width: 670px) {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -75,6 +88,10 @@ const Section = styled.section`
 
 const Title = styled.h1`
     line-height: 54px;
+
+    @media (max-width: 1200px) {
+        line-height: 42px;
+     }
 
     @media (max-width: 670px) {
         line-height: 36px;

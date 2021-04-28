@@ -48,11 +48,14 @@ const Button = styled.a`
         width: 140px;
         height: 120px;
     }
+    
+    @media (max-width: 1200px) {
+        bottom: 20px; 
+    }
 
     @media (max-width: 670px) {
 
         right: 15px;
-        bottom: 20px;
 
         img {
             width: 80px;

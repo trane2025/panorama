@@ -65,7 +65,7 @@ const LineProgresBar = styled.div`
 `;
 
 const ProgresBarContainer = styled.div`
-    width: 750px;
+    width: 85%;
     background-color: white;
     border: #efefef solid 7px;
     margin: 20px;
@@ -79,5 +79,9 @@ const ProgresBarContainer = styled.div`
         text-align: center;
         font-weight: 800;
         z-index: 2;
+    }
+
+    @media (max-width: 480px) {
+        margin: 5px;
     }
 `;

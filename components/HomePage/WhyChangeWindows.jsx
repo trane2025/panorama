@@ -31,17 +31,11 @@ export default WhyChangeWindows;
 
 const FlexContainer = styled.div`
     display: flex;
+    position: relative;
 
-    @media (max-width: 670px) {
+    @media (max-width: 960px) {
         display: block;
-        position: relative;
     }
-
-    @media (max-width: 480px) {
-        display: block;
-        position: relative;
-    }
-
     
 `;
 
@@ -60,7 +54,18 @@ const TextWhy = styled.div`
         color: ${({ colorText }) => colorText ? colorText : '#181a26'};
     }
 
-    @media (max-width: 670px) {
+    @media (max-width: 1200px){
+        max-width: 450px;
+        min-width: 450px;
+        margin-top: 30px;
+
+        p {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    @media (max-width: 960px) {
         padding: 20px;
         max-width: 350px;
         min-width: 350px;
@@ -92,7 +97,7 @@ const TextWhy = styled.div`
 const Section = styled.section`
     background-image: linear-gradient( 127deg, rgb(192,24,24) 0%, rgb(248,61,61) 100%);
 
-    @media (max-width: 670px) {
+    @media (max-width: 1200px) {
         overflow: hidden;
     }
 `;
@@ -108,6 +113,23 @@ const Left = styled.div`
 
     h2 {
         margin-bottom: 20px;
+    }
+
+    @media (max-width: 1200px){
+        height: 600px;
+        padding-right: 60px; 
+        min-width: initial;
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 960px) {
+        padding-top: 50px;
+        height: 700px;
     }
 
     @media (max-width: 670px) {
@@ -139,7 +161,14 @@ const Right = styled.div`
     width: 100%;
     min-height: 758px;
 
-    @media (max-width: 670px) {
+    @media (max-width: 1200px) {
+        min-height: 600px;
+    }
+
+    
+
+    @media (max-width: 960px) {
+        
         position: absolute;
         bottom: 0;
     }
@@ -152,24 +181,29 @@ const ImageBackground = styled.img`
     left: 0;
     top: 0;
 
-    @media (max-width: 670px) {
+
+    @media (max-width: 960px) {
         width: auto;
         top: initial;
         bottom: 0;
-        height: 310px;
-        left: 270px;
+        height: 450px;
+        left: 374px;
         bottom: 0;
         z-index: 2;
+    }
+
+    @media (max-width: 670px) {
+        width: auto;
+        top: initial;
+        height: 310px;
+        left: 270px;
     }
 
     @media (max-width: 480px) {
         width: auto;
         top: initial;
-        bottom: 0;
         height: 310px;
         left: 75px;
-        bottom: 0;
-        z-index: 2;
     }
 `;
 
@@ -178,11 +212,24 @@ const ImageHome = styled.img`
     bottom: 0;
     left: -175px;
 
+    @media (max-width: 1200px) {
+        width: auto;
+        height: 400px;
+        left: -123px;
+    }
+
+    @media (max-width: 960px) {
+        width: auto;
+        height: 350px;
+        left: 265px;
+        z-index: 4;
+        bottom: -10px;
+    }
+
     @media (max-width: 670px) {
         width: auto;
         height: 245px;
-        left: initial;
-        right: -20px;
+        left: 195px;
         z-index: 4;
         bottom: -10px;
     }

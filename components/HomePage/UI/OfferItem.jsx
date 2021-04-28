@@ -124,7 +124,7 @@ const ItemOffer = styled.li`
         justify-content: space-between;
     }
 
-    @media (max-width: 670px) {
+    @media (max-width: 960px) {
         width: 100%;
         margin: 0;
         margin-bottom: 15px;

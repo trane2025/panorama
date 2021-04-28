@@ -98,11 +98,41 @@ const WraperQuiz = styled.div`
     p {
         
     }
+
+    @media (max-width: 670px) {
+        box-shadow: none;
+        height: 650px;
+        min-height: 650px;
+
+        h2 {
+            width: 400px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        height: 550px;
+        min-height: 550px;
+
+        h2 {
+            width: 300px;
+        }
+    }
 `;
 
 const DescriptionQuiz = styled.p`
     text-align: center;
     font-size: 20px;
+
+    @media (max-width: 670px) {
+        font-size: 16px;
+        width: 400px;
+    }
+
+    @media (max-width: 480px) {
+        display: none;
+    }
 `;
 
 
@@ -110,4 +140,12 @@ const DescriptionQuiz = styled.p`
 const BackGround = styled.section`
     background: url('/images/quiz/background.jpg') no-repeat center center;
     padding: 60px 0;
+    position: relative;
+
+    @media (max-width: 670px) {
+        background: rgb(244, 244, 244);
+        padding: 0;
+    }
+
+    z-index: 21;
 `;

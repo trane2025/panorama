@@ -19,6 +19,32 @@ function Slider({ items, setCheckBox }) {
                 }}
                 scrollbar={false}
                 loop={false}
+
+                breakpoints={
+                    {
+                        320: {
+                            slidesPerView: 1,
+                            slidesPerGroup: 1,
+                            spaceBetween: 15
+                        },
+
+                        670: {
+                            slidesPerView: 2,
+                            slidesPerGroup: 2,
+                            spaceBetween: 15
+                        },
+                        970: {
+                            slidesPerView: 3,
+                            slidesPerGroup: 3,
+                            spaceBetween: 15
+                        },
+                        1200: {
+                            slidesPerView: 4,
+                            slidesPerGroup: 3,
+                            spaceBetween: 15
+                        }
+                    }
+                }
             >
 
                 {Object.values(items).map(checkbox => {
@@ -84,7 +110,6 @@ const WraperSlides = styled.div`
     align-items: center;
     margin-top: 15px;
     width: 970px;
-    max-width: 970px;
     margin-left: -15px;
     margin-right: -15px;
     min-width: 0;
@@ -97,6 +122,18 @@ const WraperSlides = styled.div`
             stroke: rgb(161, 161, 161);
         }
         
+    }
+
+    @media (max-width: 1200px) {
+        width: 740px;
+    }
+
+    @media (max-width: 970px) {
+        width: 500px;
+    }
+
+    @media (max-width: 670px) {
+        width: 250px;
     }
 `;
 

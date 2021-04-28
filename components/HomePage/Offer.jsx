@@ -58,8 +58,12 @@ const Section = styled.section`
         color: white;
     }
 
+    @media (max-width: 960px) {
+        padding: 50px 0;
+    }
+
     @media (max-width: 670px) {
-        padding: 60px 0;
+        padding: 40px 0;
     }
 
     @media (max-width: 480px) {
@@ -73,7 +77,7 @@ const ListOffer = styled.ul`
     display: flex;
     flex-wrap: wrap;
 
-    @media (max-width: 670px) {
+    @media (max-width: 960px) {
         margin: 0;
         margin-top: 30px;
     }
