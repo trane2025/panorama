@@ -140,12 +140,11 @@ const DescriptionQuiz = styled.p`
 const BackGround = styled.section`
     background: url('/images/quiz/background.jpg') no-repeat center center;
     padding: 60px 0;
-    position: relative;
 
     @media (max-width: 670px) {
         background: rgb(244, 244, 244);
         padding: 0;
     }
 
-    z-index: 21;
+    
 `;
