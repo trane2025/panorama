@@ -57,6 +57,10 @@ const Section = styled.section`
     h2 {
         color: white;
     }
+
+    @media (max-width: 480px) {
+        padding: 40px 0;
+    }
 `;
 
 const ListOffer = styled.ul`
@@ -64,4 +68,9 @@ const ListOffer = styled.ul`
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 480px) {
+        margin: 0;
+        margin-top: 15px;
+    }
 `;

@@ -44,23 +44,42 @@ export default ProfessionalWorks;
 
 const YearsIconWraper = styled.div`
     position: absolute;
-    bottom: -7px;
+    bottom: 2px;
     left: -119px;
+
+    @media (max-width: 480px) {
+        left: 0;
+        bottom: -5px;
+    }
 `;
 
 const Student = styled.img`
     position: relative;
     top: 52px;
+
+    @media (max-width: 480px) {
+        left: 0;
+        top: 25px;
+        height: 170px;
+        width: auto;
+    }
 `;
 
 const Chaild = styled.img`
     position: absolute;
     left: -170px;
     bottom: -10px;
+
+    @media (max-width: 480px) {
+        display: none;
+    }
 `;
 
 const YearsIcon = styled.img`
-    
+    @media (max-width: 480px) {
+        height: 150px;
+        width: auto;
+    }
 `;
 
 const Right = styled.div`
@@ -80,6 +99,14 @@ const Right = styled.div`
         left: 0;
         top: 0;
     }
+
+    @media (max-width: 480px){
+        height: 300px;
+
+        ::before {
+            width: 600px;
+        }
+    }
 `;
 
 const Section = styled.section`
@@ -88,6 +115,10 @@ const Section = styled.section`
 
 const FlexCotainer = styled.section`
     display: flex;
+
+    @media (max-width: 480px){
+        display: block;
+    }
 `;
 
 const Left = styled.div`
@@ -107,11 +138,28 @@ const Left = styled.div`
             margin-bottom: 0;
         }
     }
+
+    @media (max-width: 480px) {
+        min-width: fit-content;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        h2 {
+            text-align: center;
+            min-width: initial;
+        }
+    }
 `;
 
 const SubTitle = styled.p`
     font-size: 24px;
     margin-top: 15px;
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+        max-width: 210px;
+        text-align: center;
+        margin: 10px auto;
+    }
 `;
 
 const WraperAdvatages = styled.li`
@@ -138,6 +186,22 @@ const WraperAdvatages = styled.li`
         font-size: 18px;
         font-weight: 600;
         padding-left: 20px;
+    }
+
+    @media (max-width: 480px) {
+        width: 290px;
+        min-width: 290px;
+        height: 70px;
+
+        h3 {
+            font-size: 36px;
+            height: 70px;
+            width: 70px;
+        }
+
+        p {
+            font-size: 16px;
+        }
     }
 `;
 

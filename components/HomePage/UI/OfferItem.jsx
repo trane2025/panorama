@@ -42,13 +42,36 @@ const WraperOfferText = styled.div`
         line-height: 20px;
         font-weight: 400;
         color: ${({ colorText }) => colorText ? colorText : '#181a26'};
-    } 
+    }
+    
+    @media (max-width: 480px) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+
+        p {
+            min-width: 240px;
+            max-width: 240px;
+            width: 240px;
+        }
+    }
 `;
 
 
 
 const WraperImage = styled.div`
     padding-right: 20px;
+
+    @media (max-width: 480px) {
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+
+        img {
+            height: 200px;
+            width: auto;
+        }
+    }
 `;
 
 const NumberOffer = styled.h3`
@@ -56,6 +79,12 @@ const NumberOffer = styled.h3`
     font-size: 145px;
     bottom: -27px;
     color: ${({ numberColor }) => numberColor ? numberColor : '#e0e0e0'};
+
+    @media (max-width: 480px) {
+        font-size: 100px;
+        bottom: -19px;
+        left: 0;
+    }
 `;
 
 const ItemOffer = styled.li`
@@ -69,6 +98,14 @@ const ItemOffer = styled.li`
     a {
         display: flex;
         justify-content: space-between;
+    }
+
+    @media (max-width: 480px) {
         width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+        min-height: 335px;
+        display: block;
+
     }
 `;

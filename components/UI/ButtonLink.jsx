@@ -41,7 +41,9 @@ const Description = styled.div`
     right: -280px;
     bottom: -45px;
 
-    
+    @media (max-width: 480px) {
+        display: none;
+    }
 `;
 
 const DescriptionText = styled.div`
@@ -58,6 +60,10 @@ const DescriptionText = styled.div`
 const Container = styled.div`
     position: relative;
     width: fit-content;
+
+    @media (max-width: 480px) {
+        margin: 0 auto;
+    }
 `;
 
 const BackGround = styled.button`

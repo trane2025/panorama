@@ -31,6 +31,11 @@ export default WhyChangeWindows;
 
 const FlexContainer = styled.div`
     display: flex;
+
+    @media (max-width: 480px) {
+        display: block;
+        position: relative;
+    }
 `;
 
 const TextWhy = styled.div`
@@ -47,10 +52,28 @@ const TextWhy = styled.div`
         font-weight: 600;
         color: ${({ colorText }) => colorText ? colorText : '#181a26'};
     }
+
+    @media (max-width: 480px) {
+        padding: 20px;
+        max-width: 290px;
+        min-width: 290px;
+        border-radius: 10px 10px 0px 10px;
+        margin-top: 20px;
+        position: relative;
+        z-index: 3;
+        p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
 `;
 
 const Section = styled.section`
     background-image: linear-gradient( 127deg, rgb(192,24,24) 0%, rgb(248,61,61) 100%);
+
+    @media (max-width: 480px) {
+        overflow: hidden;
+    }
 `;
 
 
@@ -65,6 +88,16 @@ const Left = styled.div`
     h2 {
         margin-bottom: 20px;
     }
+
+    @media (max-width: 480px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        height: 590px;
+        
+        h2 {
+            margin-bottom: 8px;
+        }
+    }
 `;
 
 
@@ -74,16 +107,39 @@ const Right = styled.div`
     position: relative;
     width: 100%;
     min-height: 758px;
+
+    @media (max-width: 480px) {
+        position: absolute;
+        bottom: 0;
+    }
 `;
 
 const ImageBackground = styled.img`
     position: absolute;
     left: 0;
     top: 0;
+
+    @media (max-width: 480px) {
+        width: auto;
+        top: initial;
+        bottom: 0;
+        height: 310px;
+        left: 75px;
+        bottom: 0;
+        z-index: 2;
+    }
 `;
 
 const ImageHome = styled.img`
     position: absolute;
     bottom: 0;
     left: -175px;
+
+    @media (max-width: 480px) {
+        width: auto;
+        height: 245px;
+        right: 10px;
+        left: 0;
+        z-index: 4;
+    }
 `;

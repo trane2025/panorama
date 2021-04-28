@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 import Container from '../UI/Container';
 import Link from 'next/link'
+import ButtonMobileNav from './UI/ButtonMobileNav';
+import MobileNav from './UI/MobileNav';
 
 function Navigation({ links, optionValue, onchangeOption, objGeolocation, pathname }) {
+
     return (
-        <NavigationWraper>
+        <NavigationWraper id='banner'>
             <NavTop>
                 <Container>
                     <NavTopContainer>
-                        <img src="/logo.svg" alt="logo" />
+                        <Logo src="/logo.svg" alt="logo" />
                         <WraperSelect>
                             <label>Ваш город: </label>
                             <select value={optionValue} onChange={onchangeOption}>
@@ -65,7 +68,6 @@ function Navigation({ links, optionValue, onchangeOption, objGeolocation, pathna
                                 </svg>
                             </a>
                         </WraperSocialMedia>
-
                     </NavTopContainer>
 
                 </Container>
@@ -116,6 +118,10 @@ const WraperSocialMedia = styled.div`
     a {
         margin-left: 10px;
     }
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
 `;
 
 const WraperPhone = styled.div`
@@ -136,6 +142,10 @@ const WraperPhone = styled.div`
     i {
         margin-right: 10px;
     }
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
 `;
 
 const WraperGeolocation = styled.div`
@@ -149,6 +159,10 @@ const WraperGeolocation = styled.div`
     p {
         max-width: 170px;
         font-weight: 600;
+    }
+
+    @media (max-width: 1200px) {
+        display: none;
     }
 `;
 
@@ -169,6 +183,10 @@ const WraperSelect = styled.div`
         color: #e31e24;
         cursor: pointer;
     }
+
+    @media ( max-width: 1200px ){
+        display: none;
+    }
 `;
 
 const NavTop = styled.div`
@@ -176,15 +194,25 @@ const NavTop = styled.div`
     padding: 10px 0;
 `;
 
+const Logo = styled.img`
+
+`;
+
 const NavTopContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+   
 `;
 
 
 const NavBottom = styled.nav`
     background-color: #171925;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
     
 `;
 

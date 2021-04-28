@@ -90,6 +90,7 @@ const ImageHouse = styled.img`
     position: absolute;
     bottom: 0;
     left: -100px;
+    animation: fade .2s;
 `;
 
 const ImageKust = styled.img`

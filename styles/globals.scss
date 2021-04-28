@@ -43,11 +43,15 @@ h2 {
   
 }
 
+
+
 h3 {
   font-size: 24px;
   color: #1e1e1e;
   font-weight: 800;
 }
+
+
 
 h4 {
   color: #1e1e1e;
@@ -56,6 +60,25 @@ h4 {
 p {
   color: #1e1e1e;
   font-size: 16px;
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
 
 a {

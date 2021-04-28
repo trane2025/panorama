@@ -4,10 +4,13 @@ import { useEffect, useState } from 'react';
 import Contacts from '../Contacts/Contacts';
 import Footer from '../Footer/Footer';
 import Navigation from '../Navigation/Navigation';
+import ButtonMobileNav from '../Navigation/UI/ButtonMobileNav';
+import MobileNav from '../Navigation/UI/MobileNav';
 import OrderForm from '../OrderForm/OrderForm';
 import PortfolioContainer from '../Portfolio/PortfolioContainer';
 import QuizContainer from '../Quiz/QuizContainer';
 import ReviewsContainer from '../Reviews/ReviewsContainer';
+import ButtonUp from '../UI/ButtonUp';
 
 const links = [
     {
@@ -58,6 +61,7 @@ function LayOut({ title = 'Панорама', description, children, noPortfolio
 
     const { pathname } = useRouter();
 
+    const [mobileMenu, setMobileMenu] = useState(false);
 
 
     const [optionGeolocation, setOptionGeolocation] = useState('');
@@ -93,7 +97,19 @@ function LayOut({ title = 'Панорама', description, children, noPortfolio
                 onchangeOption={onchangeOption}
                 objGeolocation={optionGeolocation && geolocation[optionGeolocation]}
                 pathname={pathname} />
+            <MobileNav
+                links={links}
+                optionValue={optionGeolocation}
+                onchangeOption={onchangeOption}
+                objGeolocation={optionGeolocation && geolocation[optionGeolocation]}
+                pathname={pathname}
+                mobileMenu={mobileMenu} />
 
+            <ButtonMobileNav
+                activeBtn={mobileMenu}
+                setActiveBtn={setMobileMenu} />
+
+            <ButtonUp />
             {children}
             {!noPortfolio && <PortfolioContainer />}
             {!noQuiz && <QuizContainer />}

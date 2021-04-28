@@ -28,6 +28,7 @@ const MainBody = styled.div`
     width: 100%;
     flex: 1 1 auto;
     display: block;
+    position: relative;
 `;
 
 
