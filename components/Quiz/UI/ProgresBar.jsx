@@ -65,7 +65,7 @@ const LineProgresBar = styled.div`
 `;
 
 const ProgresBarContainer = styled.div`
-    width: 85%;
+    width: 70%;
     background-color: white;
     border: #efefef solid 7px;
     margin: 20px;

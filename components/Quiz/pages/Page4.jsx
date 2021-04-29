@@ -6,6 +6,7 @@ import Input from '../UI/Input';
 import InputWidthHeight from '../UI/InputWidthHeight';
 import InputPhoneMask from '../UI/InputPhoneMask';
 import Select from '../UI/Select';
+import ButtonWraper from '../UI/ButtonWraper';
 
 const arrCheckBox = ['Отлив', 'Откос', 'Сетка', 'Подоконник'];
 
@@ -217,7 +218,7 @@ function Page4({ changePage, dataQuiz, changeProgresBar }) {
                     </ListInput>
                 </WraperParamList>
             </Section>
-            <WraperButton>
+            <ButtonWraper>
                 <li>
                     <Button
                         animate={false}
@@ -233,7 +234,7 @@ function Page4({ changePage, dataQuiz, changeProgresBar }) {
                         Готово
                     </Button>
                 </li>
-            </WraperButton>
+            </ButtonWraper>
         </Container>
     )
 }
@@ -249,15 +250,7 @@ const Container = styled.div`
     
 `;
 
-const WraperButton = styled.ul`
-    display: flex;
-    justify-content: center;
 
-    li {
-        margin: 0 5px;
-        display: block;
-    }
-`;
 
 const InputItem = styled.li`
     margin-top: 20px;
@@ -272,10 +265,17 @@ const ListInput = styled.ul`
 `;
 
 const Section = styled.div`
-    
+    width: fit-content;
     h3 {
         text-align: center;
         margin-bottom: 30px;
+    }
+
+    @media (max-width: 770px) {
+        h3 {
+            text-align: start;
+            width: 250px;
+        }
     }
 `;
 
@@ -283,16 +283,33 @@ const WraperParamList = styled.ul`
     animation: fade .8s ;
     width: 600px;
     max-width: 600px;
+
+    @media (max-width: 770px) {
+        display: block;
+        width: fit-content;
+        margin-bottom: 20px;
+    }
 `;
 
 const WraperParamItem = styled.li`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 770px) {
+        display: block;
+
+
+    }
 `;
 
 const ListCheckbox = styled.ul`
     display: flex;
+
+    @media (max-width: 770px) {
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
 `;
 
 

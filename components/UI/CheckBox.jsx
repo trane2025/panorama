@@ -45,7 +45,7 @@ const CheckBoxItem = styled.li`
         cursor: pointer;
 
         span {
-            margin-left: 5px;
+            margin-right: 5px;
         }
 
         input {
@@ -57,5 +57,7 @@ const CheckBoxItem = styled.li`
         }
     }
 
-    
+    @media (max-width: 770px) {
+        margin: 10px;
+    }
 `;

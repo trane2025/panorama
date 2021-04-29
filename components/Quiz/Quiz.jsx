@@ -99,7 +99,7 @@ const WraperQuiz = styled.div`
         
     }
 
-    @media (max-width: 670px) {
+    @media (max-width: 770px) {
         box-shadow: none;
         height: fit-content;
         min-height: initial;
@@ -140,7 +140,7 @@ const BackGround = styled.section`
     background: url('/images/quiz/background.jpg') no-repeat center center;
     padding: 60px 0;
 
-    @media (max-width: 670px) {
+    @media (max-width: 770px) {
         background: rgb(244, 244, 244);
         padding: 0;
     }

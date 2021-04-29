@@ -59,14 +59,17 @@ const InputStyle = styled.div`
 
     @media (max-width: 760px){
         input {
-            width: 260px;
             height: 35px;
             font-size: 14px;
+            width: 100%;
         }
 
         label {
             font-size: 14px;
             margin-bottom: 5px;
         }
+
+        flex-direction: column;
+        align-items: flex-start;
     }
 `;
