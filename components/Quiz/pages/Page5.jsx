@@ -75,6 +75,10 @@ const Section = styled.div`
     h2 {
         margin-top: 20px;
     }
+
+    @media (max-width: 770px) {
+        padding: 120px 0;
+    }
 `;
 
 const DescriptionQuiz = styled.p`
