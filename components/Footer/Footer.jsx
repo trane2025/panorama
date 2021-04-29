@@ -160,6 +160,7 @@ const InfoContainer = styled.div`
 `;
 
 const DownloadWraper = styled.ul`
+    margin-top: 20px;
     li {
         margin-bottom: 15px; 
     }
@@ -190,6 +191,7 @@ const Param = styled.p`
 `;
 
 const ItemContact = styled.li`
+
     display: flex;
     align-items: center;
     margin-bottom: 15px;
@@ -204,12 +206,13 @@ const ItemContact = styled.li`
 `;
 
 const WraperContact = styled.ul`
-    
+    margin-top: 20px;
 
 
 `;
 
 const WraperLinks = styled.ul`
+    margin-top: 20px;
     li {
         margin-bottom: 12px;
     }
@@ -232,10 +235,11 @@ const Section = styled.footer`
 const FooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 `;
 
 const WraperLogo = styled.div`
-    
+    margin-top: 20px;
     i {
         margin-bottom: 20px;
         display: block;

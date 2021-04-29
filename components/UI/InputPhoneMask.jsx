@@ -42,11 +42,5 @@ const InputStyle = styled.div`
         }
     }
 
-    @media (max-width: 760px){
-        input {
-            width: 260px;
-            height: 35px;
-            font-size: 14px;
-        }
-    }
+   
 `;

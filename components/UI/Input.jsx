@@ -41,12 +41,4 @@ const InputStyle = styled.div`
             outline: 1px solid #333232;
         }
     }
-
-    @media (max-width: 760px){
-        input {
-            width: 260px;
-            height: 35px;
-            font-size: 14px;
-        }
-    }
 `;

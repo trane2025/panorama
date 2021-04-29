@@ -87,6 +87,10 @@ const Section = styled.div`
 
 const FlexContainer = styled.div`
     display: flex;
+
+    @media (max-width: 670px){
+        display: block;
+    }
 `;
 
 const ContactsWraper = styled.div`
@@ -134,7 +138,11 @@ const ContactsWraper = styled.div`
     }
 
     
-    
+    @media (max-width: 670px) {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        padding-right: 0;
+    }
     
 `;
 
@@ -156,4 +164,24 @@ const Map = styled.div`
     left: 0;
     width: 1248px;
     height: 100%;
+
+    @media (max-width: 1200px) {
+        width: 960px;
+    }
+
+    @media (max-width: 960px) {
+        width: 670px;
+    }
+
+    @media (max-width: 760px) {
+        width: 480px;
+    }
+
+    @media (max-width: 670px) {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+
+    
 `;

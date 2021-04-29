@@ -83,5 +83,6 @@ const ProgresBarContainer = styled.div`
 
     @media (max-width: 480px) {
         margin: 5px;
+        width: 80%;
     }
 `;
