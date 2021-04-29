@@ -1,5 +1,5 @@
-import '../styles/globals.scss';
 import '../styles/fonts.scss';
+import '../styles/globals.scss';
 import 'swiper/swiper.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import 'swiper/components/navigation/navigation.scss';

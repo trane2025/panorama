@@ -60,6 +60,7 @@ const BackGround = styled.button`
     text-shadow: 0.07px 0.998px 0px rgba(255, 255, 255, 0.46);
     color: rgb(31, 31, 31);
     font-size: 16px;
+    font-family: 'primaryFont';
     font-weight: 900;
     cursor: pointer;
     transition: ease 0.3s;
