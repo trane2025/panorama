@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Button from '../../UI/Button';
+import ButtonWraper from '../UI/ButtonWraper';
 
 function Page3({ changePage, title, image, selects, items, changeSelect, changeProgresBar }) {
 
@@ -15,7 +16,7 @@ function Page3({ changePage, title, image, selects, items, changeSelect, changeP
 
     return (
         <Container>
-            <h3>{title}</h3>
+            <Title>{title}</Title>
             <WraperWindowParam>
                 <WraperImage>
                     <img src={image} alt="window" />
@@ -40,7 +41,7 @@ function Page3({ changePage, title, image, selects, items, changeSelect, changeP
 
                 </SelectsList>
             </WraperWindowParam>
-            <WraperButton>
+            <ButtonWraper>
                 <li>
                     <Button
                         animate={false}
@@ -56,12 +57,21 @@ function Page3({ changePage, title, image, selects, items, changeSelect, changeP
                         Далее
                     </Button>
                 </li>
-            </WraperButton>
+            </ButtonWraper>
         </Container>
     )
 }
 
 export default Page3;
+
+const Title = styled.h3`
+    
+    @media (max-width: 550px) {
+        width: 300px;
+        text-align: center;
+    }
+    
+`;
 
 const WraperWindowParam = styled.div`
     display: flex;
@@ -69,11 +79,24 @@ const WraperWindowParam = styled.div`
     margin: 35px auto;
     width: 680px;
     animation: fade .8s ;
+
+    @media (max-width: 770px) {
+        width: fit-content;
+    }
+
+    @media (max-width: 550px) {
+        flex-direction: column;
+        margin: 15px auto;
+    }
 `;
 
 const SelectsList = styled.ul`
+    width: 100%;
+    padding-left: 50px;
     li {
+        display: block;
         margin-bottom: 20px;
+        width: inherit;
         label {
             display: block;
             font-size: 16px;
@@ -91,8 +114,14 @@ const SelectsList = styled.ul`
             border-width: 1px;
             border-color: rgb(222, 222, 222);
             border-style: solid;
-            width: 400px;
+            width: inherit;
         }
+    }
+
+    @media (max-width: 550px) {
+        flex-direction: column;
+        padding-left: 0;
+        margin-top: 15px;
     }
 `;
 
@@ -101,10 +130,11 @@ const WraperImage = styled.div`
     box-shadow: 4.213px 5.59px 9.8px 0.2px rgba(18, 18, 18, 0.07);
     width: 240px;
     height: 240px;
+    min-height: 240px;
+    min-width: 240px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 
 `;
 
@@ -117,10 +147,3 @@ const Container = styled.div`
     height: 100%;
 `;
 
-const WraperButton = styled.ul`
-    display: flex;
-
-    li {
-        margin: 0 5px;
-    }
-`;

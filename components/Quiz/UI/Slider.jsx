@@ -63,7 +63,7 @@ function Slider({ items, setCheckBox }) {
                         d="M7.621,3.006 L23.016,18.504 L7.621,34.002 " />
                 </svg>
             </ArrowNext>
-            <ArrowPrev>
+            <ArrowPrev >
                 <svg
 
                     width="30px" height="40px">
@@ -118,9 +118,7 @@ const WraperSlides = styled.div`
 
     .swiper-button-disabled {
        
-        svg {
-            stroke: rgb(161, 161, 161);
-        }
+        display: none;
         
     }
 

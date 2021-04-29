@@ -101,8 +101,9 @@ const WraperQuiz = styled.div`
 
     @media (max-width: 670px) {
         box-shadow: none;
-        height: 650px;
-        min-height: 650px;
+        height: fit-content;
+        min-height: initial;
+        padding: 40px 0;
 
         h2 {
             width: 400px;
@@ -112,8 +113,6 @@ const WraperQuiz = styled.div`
     }
 
     @media (max-width: 480px) {
-        height: 550px;
-        min-height: 550px;
 
         h2 {
             width: 300px;

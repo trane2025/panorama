@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Button from '../../UI/Button';
-import CheckBoxImage from '../UI/CheckBoxImage';
+import Slider from '../UI/Slider';
 
 function Page2({ title, items, changeRadio, changePage, changeProgresBar }) {
 
@@ -19,14 +19,7 @@ function Page2({ title, items, changeRadio, changePage, changeProgresBar }) {
         <Container>
             <Section>
                 <h3>{title}</h3>
-                <ul>
-                    {Object.values(items).map(checkbox => {
-
-                        return (
-                            <CheckBoxImage checkbox={checkbox} change={changeRadio} key={checkbox.id} />
-                        )
-                    })}
-                </ul>
+                <Slider items={items} setCheckBox={changeRadio} />
             </Section>
             <WraperButton>
                 <li>
@@ -66,12 +59,19 @@ const WraperButton = styled.ul`
     li {
         margin: 0 5px;
     }
+
+    @media (max-width: 670px){
+        flex-direction: column;
+
+        li {
+            margin: 5px 0;
+        }
+    }
 `;
 
 
 
 const Section = styled.div`
-    animation: fade .8s ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,11 +81,11 @@ const Section = styled.div`
         margin-bottom: 10px;
     }
 
-    ul {
-        display: flex;
+    @media (max-width: 670px){
+        h3 {
+            margin-bottom: 0;
+        }
     }
-
-    
 `;
 
 

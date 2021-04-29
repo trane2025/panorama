@@ -55,11 +55,10 @@ const Button = styled.a`
 
     @media (max-width: 670px) {
 
-        right: 15px;
+        display: none;
 
         img {
-            width: 80px;
-            height: 70px;
+            display: none;
         }
     }
 `;
