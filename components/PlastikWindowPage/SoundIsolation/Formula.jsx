@@ -18,25 +18,29 @@ function Formula() {
                         <h2>40 дБ</h2>
                         <p>Уровень звукоизоляции окна «Панарама»</p>
                     </FormulaItem>
-                    <Operator>
+                    <OperatorResult>
                         <h2>=</h2>
-                    </Operator>
-                    <FormulaItem >
+                    </OperatorResult>
+                    <ResultItem >
                         <h2>35 дБ</h2>
                         <p>Допустимый нормами звуковой фон во время сна</p>
-                    </FormulaItem>
+                    </ResultItem>
                     <Grafik>
                         <GrafikTitle>Коэффициент сопротивления <br /> теплопередачи дБ</GrafikTitle>
                         <WraperList>
                             <Item>
-                                <p>Панорама</p>
-                                <Graph width={'100%'} />
-                                <p>33 / 36</p>
+                                <ItemTitle>Панорама</ItemTitle>
+                                <WraperGraph>
+                                    <Graph width={'100%'} />
+                                    <p>33 / 36</p>
+                                </WraperGraph>
                             </Item>
                             <Item>
-                                <p>Обычный стеклопакет</p>
-                                <Graph width={'70%'} />
-                                <p>29 / 30</p>
+                                <ItemTitle>Обычный стеклопакет</ItemTitle>
+                                <WraperGraph>
+                                    <Graph width={'70%'} />
+                                    <p>29 / 30</p>
+                                </WraperGraph>
                             </Item>
                         </WraperList>
                     </Grafik>
@@ -49,14 +53,77 @@ function Formula() {
 export default Formula;
 
 const WraperList = styled.ul`
-    margin-top: 40px;
+    
 `;
+
+const OperatorResult = styled.li`
+    margin: 0 10px;
+    position: relative;
+    top: -45px;
+    h2 {
+        font-size: 50px;
+    }
+
+    @media (max-width: 760px) {
+        display: none;
+    }
+`;
+
+const ItemTitle = styled.p`
+    
+        color: white;
+        margin-bottom: 10px;
+    
+`;
+
+const ResultItem = styled.li`
+    background-color: #e6e6e6;
+    height: 230px;
+    padding: 0 30px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+        width: 130px;
+        max-width: 130px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    @media (max-width: 760px) {
+        width: 100%;
+        margin-top: 20px;
+        height: 200px;
+    }
+
+    @media (max-width: 480px) {
+        width: 290px;
+        margin-top: 15px;
+        padding: 30px 0;
+        height: fit-content;
+
+        p {
+            max-width: 140px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 16px;
+        }
+    }
+
+    
+`;
+
+
 
 const Graph = styled.div`
     width: 250px;
-    height: 30px;
+    height: 25px;
     background-color: #464646;
-    margin: 0 30px;
+    margin-right: 30px;
 
     ::before {
         content: '';
@@ -69,25 +136,51 @@ const Graph = styled.div`
     }
 `;
 
-const Item = styled.li`
+const WraperGraph = styled.div`
     display: flex;
     align-items: center;
-    margin: 15px 0;
+    position: relative;
 
     p {
         color: white;
-        max-width: 100px;
-        width: 100px;
+    }
+
+    @media (max-width: 480px) {
+        p {
+            position: absolute;
+            left: 10px;
+            margin-bottom: 0;
+            color: #1e1e1e;
+            font-weight: 800;
+        }
     }
 `;
 
+const Item = styled.li`
+    margin-top: 15px;
+
+    
+`;
+
 const BackGround = styled.div`
-    background: url('/images/plastikWindow/formula.jpg') no-repeat center center;
+    background: url('/images/plastikWindow/sound-isolation/formul-back.jpg') no-repeat center center;
+    background-color: #f5f3f2;
     padding: 100px 0;
 
     h2 {
         text-align: center;
         text-transform: none;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 80px 0; 
+    }
+
+    @media (max-width: 970px) {
+        padding: 60px 0; 
+    }
+    @media (max-width: 670px) {
+        padding: 40px 0; 
     }
 `;
 
@@ -95,6 +188,19 @@ const FormulaList = styled.ul`
     display: flex;
     align-items: center;
     margin-top: 50px;
+    
+    @media (max-width: 1200px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @media (max-width: 760px) {
+        margin-top: 20px;
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 15px;
+    }
 `;
 
 const FormulaItem = styled.li`
@@ -110,10 +216,27 @@ const FormulaItem = styled.li`
     p {
         width: 130px;
         max-width: 130px;
-        font-size: 16px;
         font-weight: 600;
         text-align: center;
         margin-top: 10px;
+    }
+
+    @media (max-width: 760px) {
+        width: 45%;
+        height: 200px;
+    }
+
+    @media (max-width: 480px) {
+        width: 130px;
+        padding: 30px 0;
+        height: fit-content;
+
+        p {
+            max-width: 85px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 16px;
+        }
     }
     
 `;
@@ -125,6 +248,14 @@ const Operator = styled.li`
     h2 {
         font-size: 50px;
     }
+
+    @media (max-width: 480px) {
+        top: -30px;
+        margin: 0 5px;
+        h2 {
+            font-size: 40px;
+        }
+    }
 `;
 
 const Grafik = styled.li`
@@ -135,11 +266,22 @@ const Grafik = styled.li`
     background-image: -webkit-linear-gradient( 149deg, rgb(45,44,44) 0%, rgb(36,36,36) 100%);
     background-image: -ms-linear-gradient( 149deg, rgb(45,44,44) 0%, rgb(36,36,36) 100%);
     padding: 20px 30px;
+
+    @media (max-width: 1200px) {
+        margin-left: 0;
+        max-width: 760px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 760px) {
+        margin-top: 20px;
+        height: fit-content;
+    }
 `;
 
 const GrafikTitle = styled.h4`
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    line-height: 26px;
+    line-height: 24px;
 `;

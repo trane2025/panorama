@@ -45,7 +45,8 @@ function Banner() {
 export default Banner;
 
 const WraperButton = styled.div`
-    
+    position: relative;
+    z-index: 2;
 `;
 
 const BackGround = styled.section`
@@ -56,12 +57,61 @@ const BackGround = styled.section`
         margin-bottom: 20px;
         text-transform: uppercase;
     }
+
+    @media (max-width: 1200px){
+        background-size: cover;
+        padding: 80px 0; 
+    }
+
+    @media (max-width: 970px){
+        padding: 60px 0;
+    }
+    
+
+    @media (max-width: 760px){
+        
+        padding: 40px 0;
+        background: #fdfaf6;
+        position: relative;
+        padding-bottom: 200px;
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        ::after {
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+            content: '';
+            display: block;
+            background: url('/images/plastikWindow/banner.jpg') no-repeat center center;
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+        }
+    }
+
+    @media (max-width: 480px){
+        ::after {
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+            content: '';
+            display: block;
+            background: url('/images/plastikWindow/banner.jpg') no-repeat center right;
+            width: 100%;
+            height: 230px;
+            background-size: cover;
+        }
+    }
 `;
 
 
 
 const List = styled.ul`
-    
+    position: relative;
+    z-index: 2;
 `;
 
 const WraperDescription = styled.div`
@@ -82,6 +132,21 @@ const WraperDescription = styled.div`
            color: #222222;
        } 
     }
+
+    @media (max-width: 760px){
+        p {
+            font-size: 16px;
+            line-height: initial;
+        }
+        
+    }
+
+    @media (max-width: 480px){
+        p {
+            font-size: 14px;
+        }
+        
+    }
 `;
 
 const Item = styled.li`
@@ -96,6 +161,10 @@ const Item = styled.li`
             height: 15px;
             background-color: #2d2d2d;
             margin-right: 10px;
-        }        
+        } 
+    
+    @media (max-width: 480px){
+        margin: 20px 0;
+    }           
 `;
 
