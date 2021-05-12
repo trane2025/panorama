@@ -80,6 +80,11 @@ export default WhatSafety;
 const WraperWindowList = styled.ul`
     display: flex;
     position: relative;
+
+    @media (max-width: 760px) {
+        align-items: center;
+        flex-direction: column;
+    }
 `;
 
 
@@ -118,12 +123,25 @@ const AdvantagesText = styled.ul`
             margin: 0;
         }
     }
+
+    @media (max-width: 1200px) {
+        max-width: 700px;
+    }
+
+    @media (max-width: 760px) {
+        max-width: 320px;
+    }
     
 `;
 
 
 const ItemArrow = styled.li`
     margin: 0 15px;
+
+    @media (max-width: 1200px) {
+        margin: 30px 0;
+        transform: rotate(90deg);
+    }
 `;
 
 const WraperImage = styled.div`
@@ -131,8 +149,26 @@ const WraperImage = styled.div`
     width: 250px;
     height: 320px;
     position: relative;
+
     img {
         position: absolute;
+    }
+
+    @media (max-width: 1200px) {
+        width: 250px;
+        height: 270px;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    @media (max-width: 760px) {
+        margin-right: initial;
+        margin-bottom: 20px;
     }
 `;
 
@@ -148,6 +184,12 @@ const ItemText = styled.li`
     align-items: center;
     justify-content: flex-end;
     margin: 15px 0;
+
+    @media (max-width: 760px) {
+        i {
+            display: none;
+        }
+    }
     
 `;
 
@@ -164,14 +206,32 @@ const FlexContainer = styled.ul`
     margin-top: 40px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 1200px) {
+        flex-direction: column;
+    }
 `;
 
 const BackGround = styled.div`
     background: url('/images/plastikWindow/WhatSafety.jpg') no-repeat center center;
+    background-color: #fdedba;
     padding-bottom: 100px;
 
     h2 {
         text-transform: none;
         text-align: center;
+    }
+
+    @media (max-width: 1200px) {
+        background: #fff4cf; 
+    }
+
+    @media (max-width: 970px) {
+        
+        padding-bottom: 60px;
+    }
+
+    @media (max-width: 670px) {
+        padding-bottom: 40px;
     }
 `;

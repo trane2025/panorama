@@ -31,7 +31,8 @@ const advantagesArr = [
         image: '/images/woodsWindow/advantegesWoods/image3.png',
         stretch: true,
         right: true,
-        stretchHeight: '533px',
+        colorBask: '#fef0d4',
+        stretchHeight: '532px',
         colorNumber: '#fffef3',
         textWidth: '256px'
     },
@@ -41,6 +42,7 @@ const advantagesArr = [
         number: '04',
         image: '/images/woodsWindow/advantegesWoods/image4.png',
         colorStrech: '#ffd138',
+        colorBask: '#ffd138',
         stretch: true,
         colorNumber: '#fee180',
         paddingTop: '20px'
@@ -65,6 +67,7 @@ const advantagesArr = [
         right: true,
         colorText: 'white',
         colorStrech: '#202336',
+        colorBask: '#202336',
         colorNumber: '#30334b',
         paddingTop: '20px',
         textWidth: '270px'
@@ -113,7 +116,7 @@ function aluminumConstruction() {
                         <span>01</span> Коммерческая сфера
                     </TitleAdvantages>
                 </WhereUseAluminim>
-                <WhereUseAluminim obj={privateSphere} paddingBottom='100px'>
+                <WhereUseAluminim obj={privateSphere} paddingBottom='100'>
                     <TitleAdvantages
                         colorNumber='#ed271d'
                         fontWeight='900'

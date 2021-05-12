@@ -18,4 +18,8 @@ const Title = styled.h2`
     span {
         color: ${({ colorAtantion }) => colorAtantion ? colorAtantion : '#1e1e1e'};
     }
+
+    @media (max-width: 480px) {
+        margin-bottom: 20px;
+    }
 `;

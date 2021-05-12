@@ -11,7 +11,7 @@ function TypesOfProfileSystems() {
                     <span>Виды</span> профильных <br /> систем
                     </TitleSection>
                 <List>
-                    <Item>
+                    <Item backColorMobyle='#e4fbff'>
                         <TitleNumber>
                             <h3>01</h3>
                             <h4>Холодная серия</h4>
@@ -81,6 +81,18 @@ export default TypesOfProfileSystems;
 
 const Section = styled.section`
     padding-top: 100px;
+
+    @media (max-width: 1200px) {
+        padding-top: 80px;
+    }
+
+    @media (max-width: 960px) {
+        padding-top: 60px;
+    }
+
+    @media (max-width: 670px) {
+        padding-top: 40px;
+    }
 `;
 
 const List = styled.ul`
@@ -96,7 +108,6 @@ const Item = styled.li`
     background-color: ${({ backColor }) => backColor ? backColor : 'white'};
     ${({ paddingLeft }) => paddingLeft && { paddingLeft: '15px' }};
     padding-left: ${({ paddingLeft }) => paddingLeft ? paddingLeft : 0};
-
     ::after {
         content: '';
         display: block;
@@ -108,6 +119,26 @@ const Item = styled.li`
         ${({ right }) => right ? 'left: 0;' : 'right: 0;'};
         bottom: 0;
     }
+
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        background-color: ${({ backColor, backColorMobyle }) => backColor ? backColor : backColorMobyle};
+
+        ::after {
+            display: none;
+        }
+    }
+
+    @media (max-width: 670px) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
 `;
 
 const TitleNumber = styled.div`
@@ -134,7 +165,15 @@ const TitleNumber = styled.div`
         z-index: 2;
     }
 
-    
+    @media (max-width: 670px) {
+        h3 {
+            font-size: 40px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+    }
 `;
 
 const Description = styled.div`
@@ -144,7 +183,6 @@ const Description = styled.div`
     h4 {
         font-weight: 900;
         color: ${({ color }) => color ? color : '#1e1e1e'};
-        font-size: 18px;
         text-transform: none;
         margin-bottom: 10px;
     }
@@ -154,6 +192,12 @@ const Description = styled.div`
       line-height: 22px;
       color: ${({ color }) => color ? color : '#1e1e1e'}; 
     }
+
+    @media (max-width: 670px) {
+        p {
+            line-height: 20px;
+        }
+    }
 `;
 
 const ImgItem = styled.img`
@@ -161,6 +205,23 @@ const ImgItem = styled.img`
     z-index: 2;
     right: ${({ right }) => right ? right : 0};
     bottom: ${({ bottom }) => bottom ? bottom : 0};
+
+    @media (max-width: 1200px) {
+        right: 15px;
+    }
+
+    @media (max-width: 670px) {
+        bottom: 0;
+        right: initial;
+        height: 215px;
+        width: auto;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 670px) {
+        height: 190px;
+    }
 `;
 
 const ItemImage = styled.li`
@@ -171,6 +232,10 @@ const ItemImage = styled.li`
         position: absolute;
         bottom: 0;
         left: 0;
+    }
+
+    @media (max-width: 1200px) {
+        display: none;
     }
 `;
 

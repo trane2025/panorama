@@ -61,7 +61,7 @@ function MaterialsAndTehnology() {
     return (
         <Section>
             <Container>
-                <h2>Материалы и <span className="red-text">технологии</span></h2>
+                <h2>Материалы <span className="red-text">и&nbsp;технологии</span></h2>
                 <ListBtn>
                     {Object.values(obj.items).map(item => {
 
@@ -95,6 +95,10 @@ export default MaterialsAndTehnology;
 
 const WraperContent = styled.div`
     display: flex;
+
+    @media (max-width: 870px) {
+        flex-direction: column-reverse;
+    }
 `;
 
 const TextWraper = styled.div`
@@ -115,6 +119,23 @@ const TextWraper = styled.div`
         
     }
 
+    @media (max-width: 1200px) {
+        p {
+            line-height: 22px;
+        }
+    }
+
+    @media (max-width: 870px) {
+        width: 100%;
+        padding: 30px;
+    }
+
+    @media (max-width: 670px) {
+        p {
+            line-height: 20px;
+        }
+    }
+
 `;
 
 const ImageWraper = styled.div`
@@ -123,16 +144,59 @@ const ImageWraper = styled.div`
     align-items: center;
     width: 50%;
     background-color: #dbdbdb;
-    height: 460px;
-
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+    min-height: 430px;
     img {
-        
+        position: absolute;
+        top: 0;
+    }
+
+    @media (max-width: 970px) {
+       img {
+           width: 100%;
+           height: auto;
+       } 
+    }
+
+    @media (max-width: 870px) {
+        width: 100%;
+        min-height: 350px;
+
+        img {
+            height: 100%;
+            width: auto;
+            right: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        min-height: 230px;
+
+        img {
+            height: 100%;
+            width: auto;
+            right: 0;
+        }
     }
 `;
 
 const Section = styled.section`
     background-color: #ededed;
     padding: 100px 0;
+
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+    }
+
+    @media (max-width:970px) {
+        padding: 60px 0;
+    }
+
+    @media (max-width:670px) {
+        padding: 40px 0;
+    }
 `;
 
 const ListBtn = styled.ul`
@@ -141,12 +205,23 @@ const ListBtn = styled.ul`
     margin-left: -15px;
     margin-right: -15px;
     display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 1200px) {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 670px) {
+        margin-top: 0px;
+    }
 `;
 
 const ItemBtn = styled.li`
     padding: 20px 0;
     margin: 15px;
-    width: 25%;
+    margin-bottom: 0;
+    width: calc(25% - 30px);
     background-color: ${({ active }) => active ? '#f7ed04' : 'white'};
     cursor: pointer;
     transition: .3s;
@@ -166,6 +241,24 @@ const ItemBtn = styled.li`
         text-align: center;
         color: #575757;
         color: ${({ active }) => active ? '#1e1e1e' : '#575757'};
+    }
+
+    @media (max-width: 1200px) {
+        h3 {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 970px) {
+        width: calc(30% - 30px);
+    }
+
+    @media (max-width: 670px) {
+        width: calc(50% - 30px); 
+    }
+
+    @media (max-width: 480px) {
+        width: calc(100% - 30px);
     }
 `;
 

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 function showBtn(fn) {
 
@@ -19,11 +19,13 @@ function ButtonUp() {
     const { pathname } = useRouter();
     const [activeBtn, setActiveBtn] = useState(false);
 
-
+    const srollMemo = useMemo(() => showBtn(setActiveBtn), []);
 
     useEffect(() => {
-        addEventListener('scroll', showBtn(setActiveBtn));
-        removeEventListener('scroll', showBtn(setActiveBtn));
+        addEventListener('scroll', srollMemo);
+        return () => {
+            removeEventListener('scroll', srollMemo);
+        }
     })
 
     return (

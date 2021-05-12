@@ -1,6 +1,6 @@
 import React from 'react'
 import LayOut from '../components/layout/LayOut';
-import ProductionWoods from '../components/PlastikWindowPage/ProductionWoods';
+import ProductionWoods from '../components/WoodsWindowPage/ProductionWoods';
 import Advanteges from '../components/UI/Advanteges/Advanteges';
 import MainContainer from '../components/UI/MainContainer';
 import Banner from '../components/WoodsWindowPage/Banner';
@@ -29,6 +29,7 @@ const advantagesArr = [
         image: '/images/woodsWindow/advantegesWoods/image3.png',
         stretch: true,
         right: true,
+        colorBask: '#fef0d4',
         stretchHeight: '533px',
         colorNumber: '#fffef3',
         textWidth: '256px'
@@ -38,6 +39,7 @@ const advantagesArr = [
         description: 'Древесина является органическим материалом и обладает высокой природной огнестойкостью, за счет содержащейся в дереве воды',
         number: '04',
         image: '/images/woodsWindow/advantegesWoods/image4.png',
+        colorBask: '#ffd138',
         colorStrech: '#ffd138',
         stretch: true,
         colorNumber: '#fee180',
@@ -61,6 +63,7 @@ const advantagesArr = [
         stretch: true,
         right: true,
         colorText: 'white',
+        colorBask: '#202336',
         colorStrech: '#202336',
         colorNumber: '#30334b',
         paddingTop: '20px'

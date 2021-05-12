@@ -60,6 +60,7 @@ const DescriptionText = styled.div`
 const Container = styled.div`
     position: relative;
     width: fit-content;
+    z-index: 4;
 
     @media (max-width: 480px) {
         margin: 0 auto;

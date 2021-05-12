@@ -197,6 +197,18 @@ const WraperImage = styled.div`
     img {
 
     }
+
+    @media (max-width: 480px) {
+        width: initial;
+        height: initial;
+        margin-right: 0;
+        justify-content: flex-start;
+
+        img {
+            height: 200px;
+            width: auto;
+        }
+    }
 `;
 
 const TextList = styled.div`
@@ -235,11 +247,35 @@ const Title = styled.h2`
     span {
         color: #ffc915;
     }
+
+    @media (max-width: 1200px) {
+        margin-bottom: 30px;
+    }
+
+    @media (max-width:970px) {
+        margin-bottom: 25px;
+    }
+
+    @media (max-width:670px) {
+        margin-bottom: 10px;
+    }
 `;
 
 const Section = styled.section`
     background-color: #2b3145;
     padding: 100px 0;
+
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+    }
+
+    @media (max-width:970px) {
+        padding: 60px 0;
+    }
+
+    @media (max-width:670px) {
+        padding: 40px 0;
+    }
 `;
 
 const ListProduction = styled.ul`
@@ -255,6 +291,14 @@ const ItemProduction = styled.li`
     padding: 20px;
     width: calc(50% - 30px);
     background-color: ${({ backColor }) => backColor ? backColor : 'white'};
+
+    @media (max-width: 970px) {
+        width: calc(100% - 30px);
+    }
+
+    @media (max-width: 480px) {
+        display: block;
+    }
 `;
 
 

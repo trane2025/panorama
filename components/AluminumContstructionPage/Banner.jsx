@@ -31,23 +31,56 @@ export default Banner;
 const WraperImage = styled.div`
     position: relative;
     width: 100%;
-    height: 648px;
+    height: inherit;
 
     img {
         position: absolute;
         top: 0;
         left: 0;
         z-index:3;
+        height: 100%;
+        width: auto;
+    }
+
+    @media (max-width: 770px) {
+        height: 300px;
+        width: 103%;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: -15px;
+        z-index: 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 480px) {
+        height: 280px;
+        width: 110%;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
     }
 `;
 
 const Section = styled.section`
-    background-color: #fff8eb;
+    background-color: #fffaf0;
+    position: relative;
+    z-index: 3;
 `;
 
 const FlexContainer = styled.div`
     display: flex;
-    align-items: center;
+    align-items: inherit;
+
+    @media (max-width: 770px) {
+        flex-direction: column;
+        justify-content: inherit;
+    }
 `;
 
 const TextWraper = styled.div`
@@ -90,4 +123,48 @@ const TextWraper = styled.div`
         z-index: 1;
         font-size: 24px;
     }
+
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+
+            p {
+                margin-top: 10px;
+                font-size: 18px;
+            }
+    }
+
+    @media (max-width: 970px) {
+        padding: 60px 0;
+        h2 {
+            min-width: 400px;
+        }
+    }
+
+    @media (max-width: 770px) {
+        padding-bottom: 265px;
+        ::before {
+            display: none;
+        }
+    }
+
+    @media (max-width: 670px) {
+        padding-top: 40px;
+    }
+
+    @media (max-width: 480px) {
+        padding-bottom: 250px;
+        
+        h1,h2,p {
+            text-align: center;
+            min-width: initial;
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+    }
+    
 `;

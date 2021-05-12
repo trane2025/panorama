@@ -18,14 +18,11 @@ function ProgresBar({ progresBar }) {
 
     useUpdateEffect(() => {
         setAnimate(true);
-        setTimeout(() => {
-            setAnimate(false);
-        }, [1000])
     }, [progresBar.value])
 
     return (
         <ProgresBarContainer>
-            <LineProgresBar progres={progresBar.progres} animate={animate} />
+            <LineProgresBar progres={progresBar.progres} animate={animate} onTransitionEnd={() => setAnimate(false)} />
             <p>{`Вопрос ${progresBar.value}`}</p>
         </ProgresBarContainer>
     )

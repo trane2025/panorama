@@ -42,6 +42,17 @@ export default Advanteges;
 
 const Section = styled.section`
     padding-top: 100px;
+
+    @media (max-width: 1200px) {
+        padding-top: 80px;
+    }
+
+    @media (max-width: 960px) {
+        padding-top: 60px;
+    }
+    @media (max-width: 670px) {
+        padding-top: 40px;
+    }
 `;
 
 const List = styled.ul`
@@ -52,6 +63,8 @@ const List = styled.ul`
     align-items: stretch;
     margin: 0 -15px;
     margin-top: 50px;
+
+    
 `;
 
 const Item = styled.li`
@@ -60,7 +73,7 @@ const Item = styled.li`
     position: relative;
     padding: 0 15px;
     background-color: ${({ colorBask }) => colorBask ? colorBask : 'white'};
-    padding-top: ${({ paddingTop }) => paddingTop ? paddingTop : 0};
+    padding-top: 15px;
 
     ::before {
         content: '';
@@ -95,6 +108,18 @@ const Item = styled.li`
         right: 0;
         bottom: ${({ imageBottom }) => imageBottom ? imageBottom : 0};
         z-index:1;
+    }
+
+    @media (max-width: 1200px) {
+        width: calc(52% - 30px);
+        ::before {
+            display: none;
+        }
+    }
+
+    @media (max-width: 760px) {
+        width: calc(100%);
+        
     }
 `;
 

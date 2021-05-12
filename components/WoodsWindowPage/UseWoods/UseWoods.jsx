@@ -8,7 +8,7 @@ function UseWoods() {
         <Section>
 
             <Container>
-                <h2>Мы используем <span className='red-text'>3 породы</span> дерева</h2>
+                <h2>Мы&nbsp;используем <span className='red-text'>3&nbsp;породы</span> дерева</h2>
                 <ListWoods>
                     <ImegeList1 src="/images/woodsWindow/list1.png" alt="list" />
                     <ImegeList2 src="/images/woodsWindow/list2.png" alt="list" />
@@ -44,11 +44,19 @@ const ImegeList1 = styled.img`
     position: absolute;
     left: -150px;
     top: -100px;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
 `;
 const ImegeList2 = styled.img`
     position: absolute;
     right: -150px;
     top: -100px;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
 `;
 
 const Section = styled.section`
@@ -60,13 +68,38 @@ const Section = styled.section`
         text-align: center;
     }
 
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+    }
+
+    @media (max-width:960px) {
+        padding: 60px 0;
+    }
+
+    @media (max-width:670px) {
+        padding: 40px 0;
+    }
+
 `;
 
 const ListWoods = styled.ul`
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -15px;
-    margin-top: 80px;
+    margin-top: 60px;
+
+    @media (max-width:1200px) {
+        margin-top: 40px;
+    }
+
+    @media (max-width:960px) {
+        margin-top: 20px;
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 10px;
+    }
 `;
 
 
