@@ -131,6 +131,11 @@ const Number = styled.h3`
     color: ${({ colorNumber }) => colorNumber ? colorNumber : '#f7f7f7'};
     font-weight: 800;
     z-index: 1;
+
+    @media (max-width: 760px) {
+        top: 0;
+        
+    }
 `;
 
 
