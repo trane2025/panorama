@@ -50,6 +50,11 @@ const Left = styled.div`
     position: relative;
     height: 745px;
     min-width: 450px;
+
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
     
 `;
 
@@ -77,6 +82,33 @@ const Right = styled.div`
 
         li {
             margin: 8px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding-top: 80px;
+        padding-left: initial;
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: 960px) {
+        padding-top: 60px;
+        padding-left: initial;
+        padding-bottom: 60px;
+    }
+
+    @media (max-width: 670px) {
+        padding-top: 40px;
+        padding-left: initial;
+        padding-bottom: 40px;
+    }
+
+    @media (max-width: 480px) {
+        li {
+            width: 100%;
+            img {
+                width: inherit;
+            }
         }
     }
 `;

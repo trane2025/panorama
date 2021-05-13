@@ -75,6 +75,18 @@ const TitlePage = styled.h2`
 const Section = styled.section`
     background-color: ${({ backColor }) => backColor ? backColor : '#fef0d4'};
     padding-top: 100px;
+
+    @media (max-width: 1200px) {
+        padding-top: 80px;
+    }
+
+    @media (max-width: 960px) {
+        padding-top: 60px;
+    }
+
+    @media (max-width: 670px) {
+        padding-top: 40px;
+    }
 `;
 
 const List = styled.ul`
@@ -95,6 +107,20 @@ const ListItem = styled.li`
     margin-top: 30px;
     padding: 30px;
     min-height: 300px;
+
+    @media (max-width: 1200px) {
+        width: calc(100% - 30px);
+        max-width: 600px;
+    }
+
+    @media (max-width: 670px) {
+        flex-direction: column;
+    }
+    
+    @media (max-width: 570px) {
+        min-height: 400px;
+        overflow: hidden;
+    }
 `;
 
 const TitleItem = styled.h3`
@@ -109,6 +135,10 @@ const TextItem = styled.p`
     width: 270px;
     line-height: 24px;
     color: ${({ color }) => color ? color : '#1e1e1e'};
+
+    @media (max-width: 570px) {
+        width: initial;
+    }
 `;
 
 const NumberItem = styled.h3`
@@ -116,6 +146,11 @@ const NumberItem = styled.h3`
     color: ${({ colorNumber }) => colorNumber ? colorNumber : '#f0f0f0'};
     position: absolute;
     bottom: -20px;
+
+    @media (max-width: 570px) {
+        font-size: 80px;
+        left: 0;
+    }
 `;
 
 const ItemDescription = styled.div`
@@ -127,4 +162,11 @@ const ItemImage = styled.img`
     bottom: 0;
     right: ${({ right }) => right ? right : 0};
     z-index: 1;
+
+    @media (max-width: 670px) {
+        position: absolute;
+        height: 180px;
+        width: auto;
+        right: 0;
+    }
 `;

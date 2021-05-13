@@ -68,6 +68,18 @@ const ColorsList = styled.ul`
             background-color: #4b4b4b;
         }
     }
+
+    @media (max-width: 480px) {
+        min-width: initial;
+        width: 100%;
+    }
+
+    @media (max-width: 480px) {
+        min-width: initial;
+        max-width: 320px;
+        height: 200px;
+        min-height: initial;
+    }
     
 `;
 
@@ -81,5 +93,10 @@ const ColorsItem = styled.li`
         active ?
             { outlineOffset: '-8px', outline: 'solid white 8px' }
             : ''
+    }
+
+    @media (max-width: 480px) {
+        height: 60px;
+        width: 60px;
     }
 `;

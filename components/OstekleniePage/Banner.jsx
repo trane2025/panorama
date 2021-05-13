@@ -12,7 +12,7 @@ function Banner() {
                 <FlexContainer>
                     <WraperText>
                         <h1>Остекление <br /> в Астрахани</h1>
-                        <p>балконов, лоджий, квартир, домов и коттеджей</p>
+                        <p>балконов, лоджий, квартир, домов и&nbsp;коттеджей</p>
                         <ButtonLink link={`${pathname}/#quiz`}>
                             Узнать стоимость
                     </ButtonLink>
@@ -32,11 +32,15 @@ const Section = styled.section`
 
 const FlexContainer = styled.div`
     display: flex;
+
+    @media (max-width: 970px) {
+        flex-direction: column;
+    }
 `;
 
 const WraperBanner = styled.div`
     width: 100%;
-    height: 630px; 
+    height: inherit; 
     position: relative;
     ::after {
         content: '';
@@ -49,10 +53,27 @@ const WraperBanner = styled.div`
         left: 0;
         top: 0;
     }
+
+    @media (max-width: 970px) {
+        height: 300px;
+
+        ::after {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        height: 300px;
+
+        ::after {
+            background-size: cover;
+        }
+    }
 `;
 
 const WraperText = styled.div`
     padding-top: 150px;
+    padding-bottom: 200px;
     padding-right: 85px;
     h1 {
         width: 364px;
@@ -63,4 +84,48 @@ const WraperText = styled.div`
         margin-bottom: 30px;
     }
 
+    @media (max-width: 1200px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @media (max-width: 970px) {
+        padding-top: 60px;
+        padding-bottom: 20px;
+        padding-right: 0;
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 670px) {
+        padding-top: 40px;
+
+        h1 {
+            width: initial;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 40px;
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
 `;

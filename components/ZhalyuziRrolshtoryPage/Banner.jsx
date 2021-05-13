@@ -34,11 +34,14 @@ const Section = styled.section`
 
 const FlexContainer = styled.div`
     display: flex;
-    align-items: center;
+
+    @media (max-width: 670px) {
+        flex-direction: column;
+    }
 `;
 
 const BannerText = styled.div`
-    padding: 100px 0;
+    padding: 150px 0;
     padding-right: 130px;
 
     h1 {
@@ -50,11 +53,48 @@ const BannerText = styled.div`
         font-size: 24px;
         margin: 20px 0;
     }
+
+    @media (max-width: 1200px) {
+        padding: 80px 0;
+        padding-right: 30px;
+
+        h1 {
+            min-width: 400px;
+        }
+    }
+
+    @media (max-width: 960px) {
+        padding: 60px 0;
+        padding-right: 30px;
+    }
+
+    @media (max-width: 670px) {
+        padding: 40px 0;
+
+        h1 {
+            min-width: initial;
+        }
+
+        p {
+            font-size:20px;
+            margin: 20px 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
 `;
 
 const BannerImage = styled.div`
     position: relative;
-    height: 650px;
+    height: inherit;
     width: 100%;
 
     img {
@@ -63,5 +103,20 @@ const BannerImage = styled.div`
         top: 0;
         height: 100%;
         width: 1020px;
+    }
+
+    @media (max-width: 1200px) {
+        img {
+            width: 700px;
+        }
+    }
+
+    @media (max-width: 670px) {
+        height: 300px;
+
+        img {
+            height: inherit;
+            width: auto;
+        }
     }
 `;

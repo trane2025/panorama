@@ -29,7 +29,17 @@ const Button = styled.button`
     font-family: 'primaryFont';
     cursor: pointer;
 
-   
+    @media (max-width: 670px) {
+        font-size: 16px;
+        width: 100%;
+        
+    }
+
+    @media (max-width: 480px) {
+        font-size: 13px;
+        padding: 15px;
+        max-width: 320px;
+    }
 `;
 
 

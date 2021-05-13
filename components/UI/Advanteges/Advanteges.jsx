@@ -121,6 +121,14 @@ const Item = styled.li`
         width: calc(100%);
         
     }
+
+    @media (max-width: 480px) {
+        img {
+            bottom: 0;
+            height: 150px;
+            width: auto;
+        }
+    }
 `;
 
 const Number = styled.h3`

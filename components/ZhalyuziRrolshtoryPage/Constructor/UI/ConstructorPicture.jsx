@@ -24,7 +24,22 @@ const Picture = styled.picture`
         position: absolute;
         opacity: 1;
         mix-blend-mode: multiply;
+        width:472px; 
+        height:573px;
     }
 
-    
+    @media (max-width: 480px) {
+        width: 100%;
+        margin-top: 20px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
 `;

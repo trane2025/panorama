@@ -89,7 +89,7 @@ const ListLinks = styled.ul`
 `;
 
 const ItemLink = styled.li`
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     a {
         color: ${({ active }) => active ? '#f3ef87' : 'white'};
         :hover {

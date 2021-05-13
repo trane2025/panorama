@@ -31,6 +31,7 @@ const advantagesArr = [
         right: true,
         stretchHeight: '533px',
         colorNumber: 'white',
+        colorBask: '#f6f6f6',
         colorStrech: '#f6f6f6',
         textWidth: '320px'
     },
@@ -40,6 +41,7 @@ const advantagesArr = [
         number: '04',
         image: '/images/installWindowPage/advantages/image4.png',
         colorStrech: '#ffd138',
+        colorBask: '#ffd138',
         stretch: true,
         colorNumber: '#fee180',
         paddingTop: '20px',
@@ -64,6 +66,7 @@ const advantagesArr = [
         stretch: true,
         right: true,
         colorText: 'white',
+        colorBask: '#202336',
         colorStrech: '#202336',
         colorNumber: '#30334b',
         paddingTop: '20px',
