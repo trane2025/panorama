@@ -10,8 +10,8 @@ function UseWoods() {
             <Container>
                 <h2>Мы&nbsp;используем <span className='red-text'>3&nbsp;породы</span> дерева</h2>
                 <ListWoods>
-                    <ImegeList1 src="/images/woodsWindow/list1.png" alt="list" />
-                    <ImegeList2 src="/images/woodsWindow/list2.png" alt="list" />
+                    {/* <ImegeList1 src="/images/woodsWindow/list1.png" alt="list" />
+                    <ImegeList2 src="/images/woodsWindow/list2.png" alt="list" /> */}
                     <WoodsItem
                         image="/images/woodsWindow/woods1.png">
                         <h3>Сосна</h3>
@@ -61,6 +61,7 @@ const ImegeList2 = styled.img`
 
 const Section = styled.section`
     background: url('/images/woodsWindow/woodsUseBg.jpg') top center no-repeat;
+    background-size: cover;
     background-color: #fef0d4;
     padding: 100px 0;
 
