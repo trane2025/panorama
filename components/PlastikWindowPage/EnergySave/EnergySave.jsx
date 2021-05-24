@@ -33,7 +33,7 @@ function EnergySave() {
                             </DescriptionAction>
                             <DescriptionAction summer color={'#f3e905'} right={'40px'} bottom={'-40px'}>
                                 <div className="wraper-description">
-                                    <h3>до 57%</h3>
+                                    <h3>до 45%</h3>
                                     <p>экономия на отоплении</p>
                                 </div>
                             </DescriptionAction>

@@ -26,7 +26,7 @@ function Formula() {
                         <p>Допустимый нормами звуковой фон во время сна</p>
                     </ResultItem>
                     <Grafik>
-                        <GrafikTitle>Коэффициент сопротивления <br /> теплопередачи дБ</GrafikTitle>
+                        <GrafikTitle>Коэффициент шумоизоляции К/Вт</GrafikTitle>
                         <WraperList>
                             <Item>
                                 <ItemTitle>Панорама</ItemTitle>

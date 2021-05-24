@@ -13,7 +13,7 @@ function ProductionWoods() {
                             <img src="/images/woodsWindow/production/image1.png" alt="production" />
                         </WraperImage>
                         <TextList>
-                            <h4>Стандартный</h4>
+                            <h4>СТАНДАРТ</h4>
                             <ul>
                                 <li>
                                     <p>

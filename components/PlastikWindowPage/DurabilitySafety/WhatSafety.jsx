@@ -40,7 +40,7 @@ function WhatSafety() {
                                     </i>
                                     <WraperText>
                                         <p>
-                                            <span className='black-text'>Внутренний Triplex 44.2 </span>- это многослойное ударопрочное стекло, состоящее из двух флоат-стекол (по 4мм), соединенных PVB
+                                            <span className='black-text'>2 слоя поливинилбутиральной </span> пленки (PVP), используемой для соединения стекол толщиной 0,38 мм
                                     </p>
                                     </WraperText>
                                 </ItemText>

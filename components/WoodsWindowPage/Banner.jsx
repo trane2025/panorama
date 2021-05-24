@@ -14,7 +14,7 @@ function Banner() {
                     <Left>
                         <Title>
                             <h1>Деревянные окна</h1>
-                            <h2>Экологичность природного материала в&nbsp;астрахани</h2>
+                            <h2>Экологичность природного материала приобрести в&nbsp;Астрахани</h2>
                         </Title>
                         <SubTitle>надежные, удобные, практичные <br /> создают особую атмосферу</SubTitle>
 
@@ -40,6 +40,7 @@ export default Banner;
 const Title = styled.div`
     position: relative;
     z-index: 2;
+
     h1 {
         color: #e31e24;
     }

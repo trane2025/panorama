@@ -32,7 +32,7 @@ function SoundIsolation() {
                             </DescriptionChild>
                             <WraperWindow>
                                 <DescriptionWindow>
-                                    <p><span>на 25% БОЛЬШЕ</span> защита от шума</p>
+                                    <p><span>на 25% ЛУЧШЕ</span> защита от шума</p>
                                 </DescriptionWindow>
                             </WraperWindow>
                         </LeftSection>

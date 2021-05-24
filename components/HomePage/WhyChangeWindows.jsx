@@ -10,10 +10,10 @@ function WhyChangeWindows() {
                         <h2><span className='white-text'>Меняете окна</span></h2>
                         <h2><span style={{ color: '#ffea00' }}>Нужно поставить <br /> новые?</span></h2>
                         <TextWhy>
-                            <p>Вам необходимо сменить свои старые окна или некачественные окна от застройщика</p>
+                            <p>Если вам необходимо сменить свои старые окна или некачественные окна от&nbsp;застройщика</p>
                         </TextWhy>
                         <TextWhy color='#ffea00' colorText='#d90000'>
-                            <p>Или Вы построили дом и его необходимо застеклить <span className='black-text'>качественными окнами</span></p>
+                            <p>Если Вы&nbsp;построили дом и&nbsp;его необходимо застеклить <span className='black-text'>качественными окнами</span></p>
                         </TextWhy>
                     </Left>
                     <Right>

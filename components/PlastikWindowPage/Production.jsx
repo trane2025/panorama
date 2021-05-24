@@ -10,7 +10,7 @@ function Production() {
                 <FlexConntainer>
                     <Left>
                         <TitleAdvantages colorNumber='#f3e905' colorTitle='white'><span>o4</span> производители</TitleAdvantages>
-                        <ImageLeft src="/images/plastikWindow/windowProdactions.png" alt="widow" />
+                        <ImageLeft src="/images/plastikWindow/windowProdactions-new.png" alt="widow" />
                     </Left>
                     <Right>
                         <ImageRight src="/images/plastikWindow/logoRehau.png" alt="Rehau" />

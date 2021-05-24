@@ -13,7 +13,7 @@ const arrRolshtori = {
     backColor: '#fef0d4',
     items: [
         {
-            title: 'Компакность',
+            title: 'Компактность',
             description: 'Рольшторы плотно прилегают / к окну, за счёт чего Вы можете рационально использовать подоконник и практично расставить мебель',
             number: '01',
             image: '/images/zhalyuziRrolshtoryPage/rolshtoriHappy/image1.png',
@@ -44,7 +44,7 @@ const arrRolshtori = {
 }
 
 const arrZhaluzi = {
-    title: ['Чем порадуют вас', 'рольшторы'],
+    title: ['Чем порадуют вас', 'жалюзи'],
     titleColor: '#ffffff',
     primaryTitleColor: '#fff825',
     backColor: '#343a4f',
