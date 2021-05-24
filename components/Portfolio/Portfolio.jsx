@@ -20,7 +20,7 @@ function Portfolio({ images }) {
 
                 <FlexContainer>
                     <Left>
-                        <h2>Выполненые <span className='red-text'>проекты</span></h2>
+                        <h2>Выполненные <span className='red-text'>проекты</span></h2>
 
                         <PrimeryImageList>
                             <ArrowNext>

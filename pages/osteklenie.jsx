@@ -49,7 +49,7 @@ const advantagesArr = [
     },
     {
         title: 'Большой выбор',
-        description: 'У нас самый большой большой выбор оконных систем любых форм, цветов и материало',
+        description: 'У нас самый большой большой выбор оконных систем любых форм, цветов и материалов',
         number: '05',
         image: '/images/installWindowPage/advantages/image5.png',
         colorNumber: '#444862',
