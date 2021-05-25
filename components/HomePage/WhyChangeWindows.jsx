@@ -7,7 +7,7 @@ function WhyChangeWindows() {
             <Container>
                 <FlexContainer>
                     <Left>
-                        <h2><span className='white-text'>Меняете окна</span></h2>
+                        <h2><span className='white-text'>Меняете окна?</span></h2>
                         <h2><span style={{ color: '#ffea00' }}>Нужно поставить <br /> новые?</span></h2>
                         <TextWhy>
                             <p>Если вам необходимо сменить свои старые окна или некачественные окна от&nbsp;застройщика</p>

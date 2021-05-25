@@ -7,7 +7,7 @@ function WhyChoose() {
             <Container>
                 <FlexContainer>
                     <WraperText>
-                        <h2><span>Почему</span> Астраханцы</h2>
+                        <h2><span>Почему</span></h2>
                         <h3>Все чаще выбирают платиковые окна от <span>«Панорамы» ?</span></h3>
                         <ListMessangers>
                             <li>
@@ -148,7 +148,7 @@ const WraperText = styled.div`
         width: 490px;
         color: white;
         font-weight: 800;
-        margin-top: 25px;
+        margin-top: 10px;
         margin-bottom: 25px;
         text-transform: uppercase;
         line-height: 40px;

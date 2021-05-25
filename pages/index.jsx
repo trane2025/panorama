@@ -1,3 +1,4 @@
+import About from "../components/HomePage/About";
 import Banner from "../components/HomePage/Banner";
 import HardСhoice from "../components/HomePage/HardСhoice";
 import Offer from "../components/HomePage/Offer";
@@ -18,6 +19,7 @@ const HomePage = () => {
         <HardСhoice />
         <ProfessionalWorks />
         <Offer />
+        <About />
       </LayOut>
     </MainContainer>
 

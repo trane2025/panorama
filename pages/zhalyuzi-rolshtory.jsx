@@ -25,7 +25,7 @@ const arrRolshtori = {
             image: '/images/zhalyuziRrolshtoryPage/rolshtoriHappy/image2.png'
         }, {
             title: 'Удобство / эксплуатации',
-            description: 'Одним простым движением / Вы в любое время создадите / в комнате приятный полумрак',
+            description: 'Одним простым движением / Вы в любое время создадите / в комнате приятный полумрак или наполните свой дом светом',
             number: '03',
             image: '/images/zhalyuziRrolshtoryPage/rolshtoriHappy/image3.png',
             colorNumber: '#ffe48c',

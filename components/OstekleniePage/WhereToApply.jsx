@@ -10,7 +10,7 @@ function WhereToApply() {
                     <Left>
                         <h2><span className='yellow-text'>Но не ЗНАЕТЕ</span>  <br /> <span className='white-text'>КУДА лучше</span> <br /> <span className='white-text'>ОБРАТИТЬСЯ?</span> </h2>
                         <Text>Чтобы все и сразу, <br /> в одном месте и без  <br /> лишней суеты </Text>
-                        <Text weight={600}>Что&nbsp;бы все и&nbsp;сразу, в&nbsp;одном месте и&nbsp;без лишней суеты </Text>
+                        <Text weight={600}> Где лучшее соотношение цены и&nbsp;качества?</Text>
                         <Attention>И качество на много лет</Attention>
                     </Left>
                     <Right>

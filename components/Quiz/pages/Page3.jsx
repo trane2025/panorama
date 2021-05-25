@@ -4,6 +4,8 @@ import ButtonWraper from '../UI/ButtonWraper';
 
 function Page3({ changePage, title, image, selects, items, changeSelect, changeProgresBar }) {
 
+
+
     const nextPage = () => {
         changeProgresBar('4 из 4', '100%')
         changePage('page4');

@@ -40,9 +40,9 @@ function OrderForm() {
                 <FlexContainer>
                     <Left>
                         <h2>Вызвать замерщика</h2>
-                        <p>Замерщик подстроится под удобное для Вас время.
+                        <DescriptionLeft>Замерщик подстроится под удобное для Вас время.
                         <br /> Замер займет не более <span className='black-text'>10 минут</span>.
-                        <br />Это <span className='black-text red-text'>БЕСПЛАТНО</span>  и ни к чему Вас не обязывает</p>
+                        <br />Это <span className='black-text red-text'>БЕСПЛАТНО</span>  и ни к чему Вас не обязывает</DescriptionLeft>
                         <form onSubmit={submitHandler}>
                             <ul>
                                 <li>
@@ -63,6 +63,10 @@ function OrderForm() {
                                 </li>
                             </ul>
                             <Button type='submit'>Вызвать замерщика</Button>
+                            <Confidation>
+                                <input type="checkbox" checked={true} disabled={true} />
+                                <ConfidationText>Согласен с политикой конфиденциальности</ConfidationText>
+                            </Confidation>
                         </form>
                     </Left>
                     <Right>
@@ -79,6 +83,22 @@ function OrderForm() {
 
 export default OrderForm;
 
+const Confidation = styled.div`
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+
+    
+`;
+
+const ConfidationText = styled.p`
+   
+    font-size: 12px;
+    margin-left: 5px;
+    
+`;
+
 const Section = styled.section`
     background-color: #ffecb4;
     overflow: hidden;
@@ -93,6 +113,25 @@ const FlexContainer = styled.div`
     }
 `;
 
+const DescriptionLeft = styled.p`
+    font-size: 20px;
+    line-height: 26px;
+
+    @media (max-width: 1200px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 970px) {
+        
+        line-height: 20px;
+        
+    }
+
+    @media (max-width: 760px) {
+        font-size: 16px;
+    }
+`;
+
 const Left = styled.div`
     padding-bottom: 100px;
     padding-top: 100px;
@@ -102,10 +141,7 @@ const Left = styled.div`
         margin-bottom: 20px;
     }
 
-    p {
-        font-size: 20px;
-        line-height: 26px;
-    }
+    
 
     ul {
         margin-top: 20px;
@@ -123,21 +159,11 @@ const Left = styled.div`
             margin-bottom: 10px;
         }
 
-        p {
-            font-size: 18px;
-        }
     }
 
     @media (max-width: 970px) {
 
-        padding-right: 60px;
-
-        
-
-        p {
-            font-size: 18px;
-            line-height: 20px;
-        }
+        padding-right: 60px; 
     }
 
     @media (max-width: 760px) {
@@ -145,20 +171,7 @@ const Left = styled.div`
         padding-bottom: 60px;
         padding-top: 60px;
         padding-right: 0;
-
-        p {
-            font-size: 16px;
-        }
-
         
-    }
-
-    @media (max-width: 480px) {
-        
-        p {
-            font-size: 14px;
-            line-height: 18px;
-        }
     }
 `;
 

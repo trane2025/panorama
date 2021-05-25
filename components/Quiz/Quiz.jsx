@@ -22,6 +22,7 @@ function Quiz({
     progresBar,
     changeProgresBar }) {
 
+
     return (
         <BackGround id='quiz'>
             <Container>
